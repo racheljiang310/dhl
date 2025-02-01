@@ -1,2 +1,3 @@
-# dhl
-Work / Progress on DHL ugrad research
+# DHL
+---
+See WEEKLY.md for status/progress updates
