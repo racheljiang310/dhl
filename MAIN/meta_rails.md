@@ -1,4 +1,4 @@
-# Meta-Rails [RAILS ON RAILS]
+# Meta-Rails
 
 ## Switches
 1. Cart 1 is on Track 1
