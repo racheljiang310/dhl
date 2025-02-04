@@ -109,17 +109,17 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 
 ---
 
-| Component         |  Weight   |
-|-------------------|-----------|
-| NAND Flash Memory | 4-16 grams|
-| Controller        | .5-1 gram |
-| DRAM Cache        | .5-1 gram |
-| PCB               | 2-4 grams |
-| Voltage Regs      | .5-1 gram |
-| Thermal Solutions | 5-10 grams|
-| Interface Connect | .5-1 gram |
-| Others            | .5-1 gram |
-| Total             | 10-30 g   |
+| Component         |  Weight   |   Notes  |
+|-------------------|-----------| -------- |
+| NAND Flash Memory | 4-16 grams| 3D TLC   |
+| Controller        | .5-1 gram |Phison E18|
+| DRAM Cache        | .5-1 gram |  Yes     |
+| PCB               | 2-4 grams |          |
+| Voltage Regs      | .5-1 gram |          |
+| Thermal Solutions | 5-10 grams| Heat sink / thermal pad|
+| Interface Connect | .5-1 gram |          |
+| Others            | .5-1 gram |          |
+| Total             | 10-30 g   |          |
 
 ---
 
