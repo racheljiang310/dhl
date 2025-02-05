@@ -131,4 +131,9 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
   - remove cache management
 4. Simplifying PCB: harder to do, but could still save a little
 
+## Meeting Notes
 
+---
+
+- Stacking the NAND Flash gates instead of placing them in rows
+- Look into how this would work
