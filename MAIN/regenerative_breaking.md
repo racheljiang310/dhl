@@ -3,6 +3,16 @@
 ----
 ## Research/Background
 ---
+
+[Ideals](https://eprints.whiterose.ac.uk/2118/1/ITS105_WP471_uploadable.pdf) for a successful regenerative braking system:
+- efficient energy conversion
+- energy store with a high capacity per unit weight and volume
+- high power rating (large amts of energy flow in a short space of time)
+- smooth delivery of power
+- absorb/store braking energy in direct propnrtion to braking, with < delay & loss over diff speeds and wheel torques
+
+Look into: RB energy feedback system (RBEFS)
+
 Article: **Energy-saving Carriages for Tokaido Shinkansen Trains**
 
 Define: converts kinetic energy into electric energy (power generation) by using electric motors as generators during braking
@@ -13,6 +23,7 @@ Examples of use cases:
 - JR Tokai put power regenerative braking to Series 300 - Series 700 and N700 trains.
   - Series 700 trains, 12 of the normal 16 carriages were equipped with the brake system
   - Series N700, 14 carriages to acquire all the braking force usually required for a train
+- MagLev-Cobra, Brazil
  
 ## Implementation (Research)
 ---
