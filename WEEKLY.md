@@ -10,7 +10,7 @@
 
 ## 1. **Overview of Progress**
 This week progress:
-- Brainstorm Network Switching / Docking [More Braindump](https://github.com/racheljiang310/dhl/blob/main/MAIN/regenerative_breaking.md)
+- Brainstorm Network Switching / Docking [More Braindump](https://github.com/racheljiang310/dhl/blob/main/MAIN/meta_rails.md)
   - Met with Yarwin: Discussed how we could do Rails on Rails
 - SSD Research and [Findings](https://github.com/racheljiang310/dhl/blob/main/MAIN/ssds.md)
   - Potentially take off cache?
