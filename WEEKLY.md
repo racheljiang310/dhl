@@ -1,5 +1,36 @@
 # Weekly Research Progress Update
 
+---
+
+**Name:** [Rachel Jiang]  
+**Research Topic:** [DHL]  
+**Week:** [4]: Feb 07
+
+---
+
+## 1. **Overview of Progress**
+This week progress:
+- Brainstorm Network Switching / Docking [More Braindump](https://github.com/racheljiang310/dhl/blob/main/MAIN/regenerative_breaking.md)
+  - Met with Yarwin: Discussed how we could do Rails on Rails
+- SSD Research and [Findings](https://github.com/racheljiang310/dhl/blob/main/MAIN/ssds.md)
+  - Potentially take off cache?
+  - Remove heat sink fs (takes up a lot of weight afterall)
+  - think about stacking & mapping memory to id
+- Regenerative Breaking
+  - [Main Doc](https://github.com/racheljiang310/dhl/blob/main/MAIN/regenerative_breaking.md)
+  - Reading papers: [Papers](https://github.com/racheljiang310/dhl/tree/main/PAPERS)
+    - Maglev-Cobra & Yamanashi Test Line have maglev regenerative breaking initiatives => need to look into specific stats on how much % energy regained
+---
+
+## 2. **Next Steps**
+For the upcoming week, I plan to:
+- [Rail on Rails]: do the math, maybe find a simulation software for it
+- [Regenerative Breaking]: look into stats
+- [Identify Cart]: further designing
+- [SSDs]: learn more about SSDs, and figure out memory mapping if we stack them 3D
+
+---
+
 **Name:** [Rachel Jiang]  
 **Research Topic:** [DHL]  
 **Week:** [4]: Jan 31 
