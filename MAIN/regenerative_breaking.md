@@ -31,6 +31,7 @@ Examples of use cases:
 1. Maglev Motors = Generators
   - LIMs (our accelerators) = generators
   - cart slows down, linear motors reverse function
+  - maybe regenerative suspension too?
 
 2. Energy Storage
   - within cart or along tracks to store recovered energy
@@ -55,6 +56,14 @@ Examples of use cases:
     - manage where energy goes
 
 ## LIMs as Generators
+
+Papers:
+- [Dynamic Models of Controlled Linear Induction Drives](https://www.eejournal.ktu.lt/index.php/elt/article/view/10447)
+- Combined Propulsion and Levitation Control for Maglev/Hyperloop Systems Utilizing Asymmetric Double-Sided Linear Induction Motors
+  - "On the other hand, the regenerative levitation principle described in [19] can be utilized during deceleration, which allows kinetic energy conversion to electricity and can be used to charge the battery during regenerative braking. In this case the DC mode is replaced by the AC generating mode combined with the AC motoring mode. Moreover, if the required braking force is high enough such that the generated primary current is able to maintain the required lift force, all ADSLIMs are operated in AC generating mode. As can be seen, the combination of AC motoring mode, DC mode and AC generating mode allows coverage for the full scope of operation including acceleration, cruising, and deceleration."
+  - <img width="850" alt="Screenshot 2025-02-07 at 15 22 45" src="https://github.com/user-attachments/assets/df1d6637-fbb4-4520-87fb-adb62f560bea" />
+
+
 ## Power Manamgement System
 ## Cooling
 
