@@ -131,6 +131,49 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
   - remove cache management
 4. Simplifying PCB: harder to do, but could still save a little
 
+---
+
+## 3D Stacking NAND Flash
+
+####  Way 1: Buy it [Micron’s 232-layer 3D NAND](https://dmassets.micron.com/is/image/microntechnology/gcm-1019003-infographic-232l-nand-540x340px-v2?ts=1730186089519&dpr=off)
+- [Info](https://www.micron.com/products/storage/nand-flash/232-layer-nand)
+
+#### Way 2: Custom SSD firmware
+
+1. Architecture & Interfaces
+* Host Interface: PCIe (NVMe)
+* NAND Interface: ONFI/Toggle NAND
+
+2. NAND Flash Management
+* Wear Leveling: balance usage of NAND cells
+* Garbage Collection
+* Bad Block Management: Identify/remap bad NAND blocks
+* ECC (Error Correction Code): can be simple
+
+3. Firmware & Optimization
+* **FTL(Flash Translation Layer): Maps logical addresses to physical NAND locations**
+  * software layer in an SSD controller that translates logical block addresses (LBA) from the host system into physical locations on the NAND flash memory.
+  -> Logical-to-Physical Address Mapping (L2P)
+      -> OS sees the SSD as a traditional block storage device, with addresses in LBA format
+      -> dynamically maps these logical addresses to physical NAND locations, maintaining a mapping table
+        -> Page-Level FTL: Maps each page individually to an LBA => fast random writes, need large mapping table
+        -> Block-Level FTL: Maps entire blocks => < memory overhead, write amplification
+        -> Hybrid FTL (Log): page-level mapping for hot data and block-level mapping for cold data.
+  -> Wear Leveling
+      -> limited number of P/E (Program/Erase) cycles per block
+      -> writes are evenly distributed across the NAND
+  -> Garbage Collection: periodically moves valid data to new locations and erases old blocks to reclaim
+  -> Bad Blocks: defects are marked and avoided, redirecting data storage
+  -> Error Correction Handling: correct bit errors before returning data to the host
+* DRAM Cache Management: Not needed maybe?
+* Power Loss Protection: Ensures data integrity during unexpected power cuts
+
+4. Hardware Design
+* FPGA Prototyping: test controller on an FPGA before moving to an ASIC design
+* Custom PCB: Routing high-speed NAND and PCIe signals requires careful layout design
+
+---
+
 ## Meeting Notes
 
 ---
