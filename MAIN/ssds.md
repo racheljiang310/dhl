@@ -150,7 +150,7 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 * Bad Block Management: Identify/remap bad NAND blocks
 * ECC (Error Correction Code): can be simple
 
-3. Firmware & Optimization
+3. [Firmware & Optimization](https://codecapsule.com/2014/02/12/coding-for-ssds-part-1-introduction-and-table-of-contents/)
 * **FTL(Flash Translation Layer): Maps logical addresses to physical NAND locations**
   * software layer in an SSD controller that translates logical block addresses (LBA) from the host system into physical locations on the NAND flash memory. 
     - Logical-to-Physical Address Mapping (L2P) 
