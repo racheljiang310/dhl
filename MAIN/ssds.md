@@ -152,21 +152,21 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 
 3. Firmware & Optimization
 * **FTL(Flash Translation Layer): Maps logical addresses to physical NAND locations**
-  * software layer in an SSD controller that translates logical block addresses (LBA) from the host system into physical locations on the NAND flash memory.
-  -> Logical-to-Physical Address Mapping (L2P)
-      -> OS sees the SSD as a traditional block storage device, with addresses in LBA format
-      -> dynamically maps these logical addresses to physical NAND locations, maintaining a mapping table
-        -> Page-Level FTL: Maps each page individually to an LBA => fast random writes, need large mapping table
-        -> Block-Level FTL: Maps entire blocks => < memory overhead, write amplification
-        -> Hybrid FTL (Log): page-level mapping for hot data and block-level mapping for cold data.
-  -> Wear Leveling
-      -> limited number of P/E (Program/Erase) cycles per block
-      -> writes are evenly distributed across the NAND
-  -> Garbage Collection: periodically moves valid data to new locations and erases old blocks to reclaim
-  -> Bad Blocks: defects are marked and avoided, redirecting data storage
-  -> Error Correction Handling: correct bit errors before returning data to the host
-* DRAM Cache Management: Not needed maybe?
-* Power Loss Protection: Ensures data integrity during unexpected power cuts
+  * software layer in an SSD controller that translates logical block addresses (LBA) from the host system into physical locations on the NAND flash memory. \
+    - Logical-to-Physical Address Mapping (L2P) \
+      * OS sees the SSD as a traditional block storage device, with addresses in LBA format \
+      * dynamically maps these logical addresses to physical NAND locations, maintaining a mapping table \
+          - Page-Level FTL: Maps each page individually to an LBA => fast random writes, need large mapping table \
+          - Block-Level FTL: Maps entire blocks => < memory overhead, write amplification \
+          - Hybrid FTL (Log): page-level mapping for hot data and block-level mapping for cold data. \
+    - Wear Leveling \
+        * limited number of P/E (Program/Erase) cycles per block \
+        * writes are evenly distributed across the NAND \
+    - Garbage Collection: periodically moves valid data to new locations and erases old blocks to reclaim \
+    - Bad Blocks: defects are marked and avoided, redirecting data storage \
+    - Error Correction Handling: correct bit errors before returning data to the host \
+* DRAM Cache Management: Not needed maybe? \
+* Power Loss Protection: Ensures data integrity during unexpected power cuts \
 
 4. Hardware Design
 * FPGA Prototyping: test controller on an FPGA before moving to an ASIC design
