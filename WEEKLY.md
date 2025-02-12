@@ -10,23 +10,25 @@
 
 ## 1. **Overview of Progress**
 
-This week progress:
-- API: how is data mapped into carts? Data mapped into ssds?
-  - need data, does it know which cart to access? Mapping table?
-  - distributed, parallel, threaded?
-  - research how distributed datasets are used in ML models?
+This week progress: 🔥
+
 - SSD Research and [Findings](https://github.com/racheljiang310/dhl/blob/main/MAIN/ssds.md)
-- Network Switches/Docking: simple simulation? (Unreal Engines / Unity)
-- Regenerative Breaking
+  - found cool website for learning
+- Regenerative Breaking: got stats! and experiment studies
   - [Main Doc](https://github.com/racheljiang310/dhl/blob/main/MAIN/regenerative_breaking.md)
   - [Papers](https://github.com/racheljiang310/dhl/tree/main/PAPERS)
-  - This week: cost of supercapacitor storage system + other regenerative breaking
+
 ---
 
 ## 2. **Next Steps**
 For the upcoming week, I plan to:
-- ...
-
+- API: how is data mapped into carts? Data mapped into ssds?
+  - need data, does it know which cart to access? Mapping table?
+  - distributed, parallel, threaded?
+  - research how distributed datasets are used in ML models?
+  -  Network Switches/Docking: simple simulation? (Unreal Engines / Unity)
+  - This week: cost of supercapacitor storage system + other regenerative breaking
+    
 ---
 
 **Name:** [Rachel Jiang]  
