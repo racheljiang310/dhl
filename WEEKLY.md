@@ -4,6 +4,33 @@
 
 **Name:** [Rachel Jiang]  
 **Research Topic:** [DHL]  
+**Week:** [4]: Feb 11
+
+---
+
+## 1. **Overview of Progress**
+
+This week progress:
+- API: how is data mapped into carts? Data mapped into ssds?
+  - need data, does it know which cart to access? Mapping table?
+  - distributed, parallel, threaded?
+  - research how distributed datasets are used in ML models?
+- SSD Research and [Findings](https://github.com/racheljiang310/dhl/blob/main/MAIN/ssds.md)
+- Network Switches/Docking: simple simulation? (Unreal Engines / Unity)
+- Regenerative Breaking
+  - [Main Doc](https://github.com/racheljiang310/dhl/blob/main/MAIN/regenerative_breaking.md)
+  - [Papers](https://github.com/racheljiang310/dhl/tree/main/PAPERS)
+  - This week: cost of supercapacitor storage system + other regenerative breaking
+---
+
+## 2. **Next Steps**
+For the upcoming week, I plan to:
+- ...
+
+---
+
+**Name:** [Rachel Jiang]  
+**Research Topic:** [DHL]  
 **Week:** [4]: Feb 07
 
 ---
