@@ -9,6 +9,11 @@ Define: compact, high-performance storage device commonly used in modern computi
 Shape and Size: M.2 SSDs are rectangular with length (first two digits = the width in mm, last two represent the length).
 Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their supported interfaces (e.g., SATA, PCIe NVMe).
 
+<img width="500" alt="Screenshot 2025-02-16 at 20 27 13" src="https://github.com/user-attachments/assets/f536b552-a6ee-4d73-8c12-bd94e2309689" />
+
+<img width="800" alt="Screenshot 2025-02-16 at 21 09 18" src="https://github.com/user-attachments/assets/d1cc649f-d08d-4936-999a-4eb69d57b575" />
+
+
 ----
 ## M.2 Components [1TB storage]
 
@@ -18,20 +23,6 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 - high -> low endurance
 - low -> high capacity
 - - scaling up > mass, by a lot
-
-```
-+------------------------------------------------------+
-|                     NAND Flash                      |
-+------------------------------------------------------+
-| Plane 1      | Plane 2      | ...  | Plane N        |
-|------------------------------------------------------|
-| Block 1      | Block 2      | ...  | Block M        |
-|------------------------------------------------------|
-| Page 1       | Page 2       | ...  | Page 256       |
-|------------------------------------------------------|
-| 8 KB         | 8 KB         | ...  | 8 KB           |
-+------------------------------------------------------+
-```
 
 #### B. Controller (Microcontroller) [0.5-1 gram]
 > manages data storage & retrieval
