@@ -9,11 +9,11 @@ Define: compact, high-performance storage device commonly used in modern computi
 Shape and Size: M.2 SSDs are rectangular with length (first two digits = the width in mm, last two represent the length).
 Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their supported interfaces (e.g., SATA, PCIe NVMe).
 
-<img width="500" alt="Screenshot 2025-02-16 at 20 27 13" src="https://github.com/user-attachments/assets/f536b552-a6ee-4d73-8c12-bd94e2309689" />
+<img width="600" alt="Screenshot 2025-02-16 at 20 27 13" src="https://github.com/user-attachments/assets/f536b552-a6ee-4d73-8c12-bd94e2309689" />
 
-<img width="800" alt="Screenshot 2025-02-16 at 21 09 18" src="https://github.com/user-attachments/assets/d1cc649f-d08d-4936-999a-4eb69d57b575" />
+<img width="600" alt="Screenshot 2025-02-16 at 21 09 18" src="https://github.com/user-attachments/assets/d1cc649f-d08d-4936-999a-4eb69d57b575" />
 
-<img width="800" alt="Screenshot 2025-02-16 at 21 12 06" src="https://github.com/user-attachments/assets/0b98469a-e0fd-4692-8e35-8471d55d2743" />
+<img width="600" alt="Screenshot 2025-02-16 at 21 12 06" src="https://github.com/user-attachments/assets/0b98469a-e0fd-4692-8e35-8471d55d2743" />
 
 
 ----
@@ -43,9 +43,7 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 - buffer for read/write ops
 - scaled up weight not huge
 
-**NOTE**: Not a huge part of the weight though
-  - Reason 1: we're doing sequential read/write operations for data transport, not random access
-  - Reason 2: we're won't create a big enough speedup to give us a reason to keep it
+**NOTE**: Don't remove
   
 #### D. Interface Connector [0.5-1 gram]
 > edge connector that plugs into M.2 slot on motherboard
@@ -89,7 +87,7 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 |  +---------------------------------------+  |
 |                                             |
 |  +---------------------------------------+  |
-|  |            DRAM Cache (Optional)      |  |
+|  |            DRAM Cache                 |  |
 |  | (Speeds up data access and mapping)   |  |
 |  +---------------------------------------+  |
 |                                             |
@@ -120,7 +118,7 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 |-------------------|-----------| -------- |
 | NAND Flash Memory | 4-16 grams| 3D TLC   |
 | Controller        | .5-1 gram |Phison E18|
-| DRAM Cache        | .5-1 gram |  Yes     |
+| DRAM Cache        | .5-1 gram |  No      |
 | PCB               | 2-4 grams |          |
 | Voltage Regs      | .5-1 gram |          |
 | Thermal Solutions | 5-10 grams| Heat sink / thermal pad|
@@ -131,7 +129,7 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 ---
 
 1. Removing Heatsink: saves 5-10 grams
-2. Removing DRAM Cache: saves .5-1 gram (not really worth it in terms of mass)
+2. Removing DRAM Cache: saves .5-1 gram (not really worth it in terms of mass) [future me: no]
 3. Simplified controller: reduce power consumption/heat generation
   - removing ECC
   - removing heat sink management
@@ -185,5 +183,5 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 
 ---
 
-- Stacking the NAND Flash gates instead of placing them in rows
+- Stacking the NAND Flash gates
 - Look into how this would work
