@@ -19,6 +19,20 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 - low -> high capacity
 - - scaling up > mass, by a lot
 
+```
++------------------------------------------------------+
+|                     NAND Flash                      |
++------------------------------------------------------+
+| Plane 1      | Plane 2      | ...  | Plane N        |
+|------------------------------------------------------|
+| Block 1      | Block 2      | ...  | Block M        |
+|------------------------------------------------------|
+| Page 1       | Page 2       | ...  | Page 256       |
+|------------------------------------------------------|
+| 8 KB         | 8 KB         | ...  | 8 KB           |
++------------------------------------------------------+
+```
+
 #### B. Controller (Microcontroller) [0.5-1 gram]
 > manages data storage & retrieval
 - read/write operations
