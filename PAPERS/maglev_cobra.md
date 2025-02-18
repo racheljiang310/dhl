@@ -33,6 +33,7 @@ B. Supercapacitors
 
 Factors: Wieght, Performance, Cost
 1. Hybrid -energy storage system (batteries & supercapacitors)
+2. [Mouser Calculator](https://www.mouser.com/c/passive-components/capacitors/supercapacitors-ultracapacitors/?srsltid=AfmBOorN2dSc2525s0_0openlczjNtMAPJc4-qEtSeGx8uVM9TYUQQG4)
 
 <img width="591" alt="Screenshot 2025-02-18 at 14 09 56" src="https://github.com/user-attachments/assets/ce738768-5899-449f-b803-50bd2596aa7c" />
 
