@@ -21,6 +21,7 @@ Phase 3: Uniform Deceleration
 Work needed to move train: $W = \int (F_{trust} \times v)dt$
 - Notes:
   - since we have lighter mass, and friction constant is lower, means < Work to move carts
+  - we also dom't need AC
   - they also take into account auxilary electrical componenets (light, screen, motor door, hydraulic systems ~ 76.53 WH Total Energy)
 
 Energy Storage System Technologies
