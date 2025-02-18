@@ -182,6 +182,8 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 ## Meeting Notes
 
 ---
-
-- Stacking the NAND Flash gates
-- Look into how this would work
+- 02/18: Journaling for rights
+- 02/18: Fill as much, then load balance on last SSD
+- 02/18: Replication of data (RAID)
+- 02/18: Plug in all 64 SSDs into the server?
+- 
