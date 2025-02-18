@@ -37,7 +37,7 @@ Examples of use cases:
   - within cart or along tracks to store recovered energy
   - Options: batteries, supercapacitors (faster charge/discharge)
       - Supercapacitors: good for frequent charge/discharge (immediate use), less storage capacity, but long lifespan
-        - density of energy "40 times greater" than that of batteries [Source](https://www.magneticbearings.org/app/uploads/publications/ismb17/ismb17_023.pdf)
+        - 
       - Batteries: dense storage, but smaller lifespan, slower charge/discharge, and heat intensive at times
       - Flywheel: simple, fast charge/discharge, but requires weight & extra implementation to prevent loss of energy
   - Idea: on tracks, then ideal for start-stop operations can enable charge/discharge features
