@@ -61,7 +61,10 @@ Headers: {
    - Server broadcasts for ssd_ids => wait for correct SSD to ACK
    - Connections made => correct SSDs communicate with the server
   
-6. Cart undocks from the station/zone
-7. Server acknowledges to cart server of completion
-8. Cart controller server routes cart / configures path
-9. Cart controller maglev swooshes back to cart home => cart server marks cart id not busy
+
+Network Switching - Multistops fit into this model? Maybe reroute on demand
+  
+7. Cart undocks from the station/zone
+8. Server acknowledges to cart server of completion
+9. Cart controller server routes cart / configures path
+10. Cart controller maglev swooshes back to cart home => cart server marks cart id not busy
