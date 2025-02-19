@@ -186,4 +186,4 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 - 02/18: Fill as much, then load balance on last SSD
 - 02/18: Replication of data (RAID)
 - 02/18: Plug in all 64 SSDs into the server?
-- 
+- 02/18: How does data transfer work? Which server knows what?
