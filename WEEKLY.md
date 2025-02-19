@@ -4,6 +4,32 @@
 
 **Name:** [Rachel Jiang]  
 **Research Topic:** [DHL]  
+**Week:** [7]: Feb 18
+
+---
+
+## 1. **Overview of Progress**
+
+This week progress: 🔥
+
+- SSD Research and [Findings](https://github.com/racheljiang310/dhl/blob/main/MAIN/ssds.md)
+  - found cool video for learning about memory mapping, controller interfacing with SSDs
+- Regenerative Breaking: got stats! and experiment studies
+  - [Main Doc](https://github.com/racheljiang310/dhl/blob/main/PAPERS/maglev_cobra.md)
+
+---
+
+## 2. **Next Steps**
+For the upcoming week, I plan to:
+- API: how is data mapped into carts? Data mapped into ssds?
+  - hone down the data knowledge, sharing, and communication protocols
+-  Network Switches/Docking: simple simulation? (Unreal Engines / Unity)
+
+---
+---
+
+**Name:** [Rachel Jiang]  
+**Research Topic:** [DHL]  
 **Week:** [6]: Feb 11
 
 ---
