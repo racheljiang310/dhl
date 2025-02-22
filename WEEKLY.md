@@ -14,6 +14,8 @@ This week progress: 🔥
 
 - SSD Research and [Findings](https://github.com/racheljiang310/dhl/blob/main/MAIN/ssds.md)
   - found cool video for learning about memory mapping, controller interfacing with SSDs
+- Schema for communication between servers, carts, and metadata server lookups
+  - what sends what to what and when to carry out a cart data access request
 - Regenerative Breaking: got stats! and experiment studies
   - [Main Doc](https://github.com/racheljiang310/dhl/blob/main/PAPERS/maglev_cobra.md)
 
@@ -21,9 +23,9 @@ This week progress: 🔥
 
 ## 2. **Next Steps**
 For the upcoming week, I plan to:
-- API: how is data mapped into carts? Data mapped into ssds?
-  - hone down the data knowledge, sharing, and communication protocols
--  Network Switches/Docking: simple simulation? (Unreal Engines / Unity)
+- API: work on some diagrams for this
+- Simulation: Continue working on Network Switches/Docking
+- More Statistics & Paper Reading
 
 ---
 ---
