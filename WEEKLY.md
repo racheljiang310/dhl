@@ -16,6 +16,7 @@ This week progress: 🔥
   - found cool video for learning about memory mapping, controller interfacing with SSDs
 - Schema for communication between servers, carts, and metadata server lookups
   - what sends what to what and when to carry out a cart data access request
+  - [Schema](https://github.com/racheljiang310/dhl/blob/main/MAIN/schemas.md)
 - Regenerative Breaking: got stats! and experiment studies
   - [Main Doc](https://github.com/racheljiang310/dhl/blob/main/PAPERS/maglev_cobra.md)
 
