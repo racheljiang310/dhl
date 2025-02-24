@@ -11,3 +11,10 @@
 ![Integrated Server](https://github.com/user-attachments/assets/5d388b33-3a66-4f3f-98b7-bd0273eed38f)
 
 ---
+
+
+## Server-Cart - Level Communication State Diagram
+
+![Integrated Server 2](https://github.com/user-attachments/assets/dcc9d3f8-a54e-4e07-8f41-b2808ac23d0b)
+
+---
