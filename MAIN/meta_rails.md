@@ -1,6 +1,11 @@
-# Meta-Rails
+# Meta-Rails (aka _RAILS ON RAILS_)
+
+---
 
 ## Switches
+
+---
+
 1. Cart 1 is on Track 1
 2. Track 2 next to Track 1
 3. Cart 1 reaches switch area
@@ -9,7 +14,14 @@
 6. Cart 1 moves to Rail 2's top fully, continues vertical movement
 8. Rail 1 and Rail 2 diverge, return to original tracks, back to normal
 
+![ROR](https://github.com/user-attachments/assets/18ded2d9-2f01-49f0-98cf-2911a123bb98)
+
+---
+
 ## Docking
+
+---
+
 1. Cart arrives at docking station (still on rails)
 2. Electromagnetic force applied sideways to shift the perpendicular platform towards the docking area
 3. New rails replace position of initial rails (that the docked cart is on top of)
