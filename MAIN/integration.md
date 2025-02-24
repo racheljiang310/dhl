@@ -8,7 +8,7 @@
 
 ## Data Center - Level Communication State Diagram
 
-![Integrated Server](https://github.com/user-attachments/assets/5d388b33-3a66-4f3f-98b7-bd0273eed38f)
+![Integrated Server](https://github.com/user-attachments/assets/609604af-0808-454f-9828-c017d528579b)
 
 ---
 
