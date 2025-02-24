@@ -59,8 +59,28 @@ Headers: {
 
 5. Cart arrives at dockings station @ rack R, server S
    - Server broadcasts for ssd_ids => wait for correct SSD to ACK
+```
+{
+  "from": "ai-gpu-node-01"
+  "ssd-id": "ssd-01"
+},
+{
+  "from": "ai-gpu-node-01"
+  "ssd-id": "ssd-05"
+},
+{
+  "from": "ai-gpu-node-01"
+  "ssd-id": "ssd-07"
+}
+```
    - Connections made => correct SSDs communicate with the server
-  
+```
+{
+  "from": "ssd-01"
+  "to": "ai-gpu-node-01"
+  "response": "ACK"
+}
+```
 
 Network Switching - Multistops fit into this model? Maybe reroute on demand
   
