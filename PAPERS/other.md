@@ -69,4 +69,13 @@ To better accommodate the RB energy, measures of energy storage (1) and energy f
 
 <img width="1470" alt="Screenshot 2025-02-11 at 13 14 15" src="https://github.com/user-attachments/assets/12481325-3cb1-4ce1-86dd-4d985ec4b784" />
 
+----
+
+## [A New System of Combined Propulsion and Levitation for Maglev Transportation](https://ieeexplore.ieee.org/document/9124470)
+
+"**The Inductrack system** demonstrates a high levitation efficiency since PMs require no power to produce the magnetic field and the only power loss originates from resistive losses due to currents induced in the track. The major drawback [...] requires huge and **expensive Neodymium-Iron-Boron (NdFeB) magnets which account for at least 2% of the total weight of the vehicle**"
+
+Their proposal: "combines propulsion and suspension control in a series of asymmetric double sided linear induction motors (ADSLIMs) and allows each ADSLIM to work near its maximum efficiency operating point when producing desired propulsion and levitation forces."
+
+Results: "The results show that the regenerative levitation case with maximum levitation efficiency demonstrates the best performance with 17.5% less power requirement compared to the zero thrust operation and 7.8% less power compared to the regenerative levitation case with maximum efficiency. "
 
