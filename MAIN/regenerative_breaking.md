@@ -33,13 +33,12 @@ Examples of use cases:
   - cart slows down, linear motors reverse function
   - maybe regenerative suspension too?
 
-2. Energy Storage
+**2. Energy Storage**
   - within cart or along tracks to store recovered energy
   - Options: batteries, supercapacitors (faster charge/discharge)
-      - Supercapacitors: good for frequent charge/discharge (immediate use), less storage capacity, but long lifespan
-        - 
-      - Batteries: dense storage, but smaller lifespan, slower charge/discharge, and heat intensive at times
-      - Flywheel: simple, fast charge/discharge, but requires weight & extra implementation to prevent loss of energy
+      - **Supercapacitors**: good for frequent charge/discharge (immediate use), less storage capacity, but long lifespan
+      - **Batteries**: dense storage, but smaller lifespan, slower charge/discharge, and heat intensive at times
+      - **Flywheel**: simple, fast charge/discharge, but requires weight & extra implementation to prevent loss of energy
   - Idea: on tracks, then ideal for start-stop operations can enable charge/discharge features
     - good idea bc energy can be distributed across tracks, fed into nearest storage system, central management via API
   - Idea: within cart, then on-demand charge/discharge, but at the cost of a heavier cart (not a fan)
