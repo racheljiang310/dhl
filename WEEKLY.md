@@ -10,7 +10,7 @@
 
 ## 1. **Overview of Progress**
 
-This week progress: 🔥
+This week progress: 🌊
 
 - SSD Research and [Findings](https://github.com/racheljiang310/dhl/blob/main/MAIN/ssds.md)
   - found cool video for learning about memory mapping, controller interfacing with SSDs
@@ -19,6 +19,7 @@ This week progress: 🔥
   - [Schema](https://github.com/racheljiang310/dhl/blob/main/MAIN/communication_schemas.md)
 - Regenerative Breaking: got stats! and experiment studies
   - [Main Doc](https://github.com/racheljiang310/dhl/blob/main/PAPERS/maglev_cobra.md)
+- Network Switching Simulation: basic 3D cubes that move along a rail
 
 ---
 
