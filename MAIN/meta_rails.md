@@ -18,11 +18,11 @@
 ![ROR](https://github.com/user-attachments/assets/18ded2d9-2f01-49f0-98cf-2911a123bb98)
 
 
-### Idea 2: 1-Cart Roundabouts
+### Idea 2: 1-Cart Hovering Roundabouts
 
-1. Cart 1 at intersection
-2. Cart 1 enters roundabout, roundabout locks entry to intersection (1 cart only)
-3. Cart 1 leaves roundabout, roundabout controller frees locks, invites next cart to cross intersection
+1. Cart 1 at intersection, leaves rail track
+3. Cart 1 enters roundabout, where it's momentarily levitating, roundabout locks entry to intersection (1 cart only)
+4. Cart 1 leaves roundabout, roundabout controller frees locks, invites next cart to cross intersection
 
 _Picture coming soon_
 
