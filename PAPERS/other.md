@@ -79,3 +79,7 @@ Their proposal: "combines propulsion and suspension control in a series of asymm
 
 Results: "The results show that the regenerative levitation case with maximum levitation efficiency demonstrates the best performance with 17.5% less power requirement compared to the zero thrust operation and 7.8% less power compared to the regenerative levitation case with maximum efficiency. "
 
+<img width="1186" src="https://github.com/user-attachments/assets/99db0b53-0841-4f93-9097-25e5da036e5b" />
+
+
+
