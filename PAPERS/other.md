@@ -54,26 +54,9 @@ converter." src="https://github.com/user-attachments/assets/52aa4450-f364-459d-8
 
 <img width="688" alt="Screenshot 2025-02-11 at 14 02 16" src="https://github.com/user-attachments/assets/d0210724-05cb-4f97-8295-80109295ec37" />
 
-## [The Supercapacitor Energy Storage System is Applied to Shanghai Medium-low Speed Maglev Train Test Line](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9670830)
-
-- "In regenerative braking, the linear induction motor has to overcome the running resistance of the train, the loss of the linear induction motor itself, the internal loss of the traction inverter, and the energy consumed in each link when converting kinetic energy into electric energy to feedback to the grid."
-
 ---
 
-<img width="403" alt="Screenshot 2025-02-11 at 12 42 25" src="https://github.com/user-attachments/assets/288a2389-512f-44d1-b14d-6497b350b328" />
-
----
-
-"The designed maximum operating speed of the Medium-low Speed Maglev Train test line is 100 km/h, and the formation form is composed of two cars with a coach
-and four coaches without a coach in series in the middle. The total load of the whole train is 209.1t[6], and the technical requirements related to the braking performance of the maglev train are as follows: "
-- "The emergency braking distance is less than 300m when the initial braking speed is 100 km/h;"
-- "The average deceleration of service braking (regenerative braking) is greater than 1.1 m/s2."
-
-"When train regenerative braking, the traction motor is transformed into a generator that converts the kinetic energy of the train into electric energy. In the meantime,the generated electric energy returns to the DC power grid and is used by the electric appliances on the train. It can be calculated that if the maximum DC grid voltage of this type of maglev train is not more than 1750V when braking, the maximum instantaneous current to be absorbed in the design of braking resistance or absorption energy storage system should be about 1200A, and the maximum instantaneous absorbed power should be about 3.6MW. Furthermore, it is estimated that the continuous current absorbed by the energy storage system or consuming resistor is about 800A under this condition"
-
----
-
-2. [Positive Rail Voltage Rise Behavior and Inhibition Analysis of Regenerative Braking of Medium–Low-Speed Maglev Train](file:///Users/admin/Downloads/energies-17-01782%20(2).pdf#page=17&zoom=100,48,573)
+## [Positive Rail Voltage Rise Behavior and Inhibition Analysis of Regenerative Braking of Medium–Low-Speed Maglev Train](https://www.researchgate.net/publication/379675421_Positive_Rail_Voltage_Rise_Behavior_and_Inhibition_Analysis_of_Regenerative_Braking_of_Medium-Low-Speed_Maglev_Train)
 
 "The current treatment method targeted for the MLS maglev is to release the excess RB energy in the form of heat energy via a ground resistance absorption device, but it results in energy waste and increases the temperature in the tunnel.
 
