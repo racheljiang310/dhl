@@ -52,3 +52,15 @@ Conclusions:
 Charts:
 
 <img width="524" alt="Screenshot 2025-02-05 at 13 42 36" src="https://github.com/user-attachments/assets/1232c8a3-5e79-46d3-8ccb-e34824e67b5d" />
+
+[Energy Storage System for a MagLev Vehicle](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10407220&casa_token=-B14X6yvbbIAAAAA:tCOjKP4rktPkOx8bgnFZS3uejTasaJ3BSKXn1_K0RbzJj3y4RARDPGFH6yvfp28_IG0YwXTeDE4N)
+
+An autonomous energy storage system composed of a set of supercapacitor modules of the EDLC (Electric Double-Layer Capacitor) class was designed to dismiss the need of brushes and
+the power bus
+
+<img width="400" src="https://github.com/user-attachments/assets/29a7548d-1f5e-480e-a051-42dd75b12ef0" />
+<img width="450" src="https://github.com/user-attachments/assets/26fa7a99-376c-4a17-84a9-b5aa15c7adb4" />
+
+Conclusions:
+* implementing an energy storage device on board the vehicle, providing it with sufficient autonomy to travel between two stations. This approach eliminates the need for a power bus along the guideway, offering a more efficient and flexible power supply solution
+* 
