@@ -6,7 +6,7 @@
 
 ---
 
-### Idea 1: Diagonal Movement (Not my favorite)
+### [OLD] Idea 1: Diagonal Movement (Not my favorite)
 
 1. Cart 1 is on Track 1, Track 2 next to Track 1
 3. Cart 1 reaches switch area
@@ -17,6 +17,7 @@
 
 ![ROR](https://github.com/user-attachments/assets/18ded2d9-2f01-49f0-98cf-2911a123bb98)
 
+---
 
 ### Idea 2: 1-Cart Hovering Roundabouts (A little imaginative, but not impossible)
 
@@ -27,6 +28,8 @@
 <img width="300" alt="Hovering Roundabout" src="https://github.com/user-attachments/assets/b9766f91-ade2-4047-a16c-8946bd444001" />
 
 > Note: We'd need something that acts like a multi-directional peashooter that can apply EMFs that will ultimately propel the cart out of the roundabout as it's continuously hovering in circles. Some controller will need to direct the peashooter and time it correctly, also we'd need to makes sure the cart doesn't bang on the walls of the tube. Hence, this idea is a little out there, not impossible, but has a lot of risk
+
+---
 
 ### Idea 3: Pre-Configured MagLev switching (the straight-est)
 1. 2 Cart "homes" that will face opposite of one another from left and right ends of the data center
@@ -41,7 +44,9 @@
 
 > Note: This one might be easiest to implement because we don't have to worry about switching en-route. However, this also means the path the cart takes isn't going to be the most optimal (especially for return trips), but we can trade this off for a faster cart speed since we can just send it without need to worry about slowing down to make a network switch
 
-### Idea 3: Complex and Sort of not Optimal Network Switches (based off real switches)
+---
+
+### Idea 4: Complex and Sort of not Optimal Network Switches (based off real switches)
 
 1. Intersections = a network switch for MagLev
 2. Once a cart reaches a network switch, enter a race condition to contend for slot in switch (aka everyone else in line)
@@ -56,6 +61,8 @@
 ---
 
 ## Docking
+
+Personally, I like the meta rails being applied here because we can just have the meta rail be pulled out and pulled in when the cart arrives or leaves the docking station. 
 
 ---
 
