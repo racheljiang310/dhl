@@ -6,20 +6,15 @@
 
 ---
 
-### [OLD] Idea 1: Diagonal Movement (Not my favorite)
+### Switching Concept
 
-1. Cart 1 is on Track 1, Track 2 next to Track 1
-3. Cart 1 reaches switch area
-4. Cart 1's top Rail 1 detaches from bottom Rail 1, and same thing happens for Rail 2
-5. Rail 1 and Rail 2 converge, one in front of other
-6. Cart 1 moves to Rail 2's top fully, continues vertical movement
-8. Rail 1 and Rail 2 diverge, return to original tracks, back to normal
+1. Rails go in the "unconventional" direction (aka sideways from the rail via hopping on a meta rail)
 
 ![ROR](https://github.com/user-attachments/assets/18ded2d9-2f01-49f0-98cf-2911a123bb98)
 
 ---
 
-### Idea 2: 1-Cart Hovering Roundabouts (A little imaginative, but not impossible)
+### Idea 1: 1-Cart Hovering Roundabouts (A little imaginative, but not impossible)
 
 1. Cart 1 at intersection, leaves rail track
 3. Cart 1 enters roundabout, where it's momentarily levitating, roundabout locks entry to intersection (1 cart only)
@@ -31,7 +26,7 @@
 
 ---
 
-### Idea 3: Pre-Configured MagLev switching (the straight-est)
+### Idea 2: Pre-Configured MagLev switching (the straight-est)
 1. 2 Cart "homes" that will face opposite of one another from left and right ends of the data center
 2. Meta rails in cart homes. As cart server deploys a cart, it will pre-configure the exact row it should be headed towards, thus moving the cart sideways via meta rails
 3. Once in the right row, the cart is shot from left to right (or right to left) and will only move in the directions of that row.
@@ -48,7 +43,7 @@
 
 ---
 
-### Idea 4: Complex and Sort of not Optimal Network Switches (based off real switches)
+### Idea 3: Complex and Sort of not Optimal Network Switches (based off real switches)
 
 1. Intersections = a network switch for MagLev
 2. Once a cart reaches a network switch, enter a race condition to contend for slot in switch (aka everyone else in line)
