@@ -22,7 +22,7 @@ regenerative breaking cost-benefit analysis between battery & super capacitor st
 
 ## 2. **Next Steps**
 For the upcoming week, I plan to:
-- API: work on some diagrams for this
+- PCIe: figure out how the connections will be made between server and SSD [link](https://github.com/racheljiang310/dhl/blob/main/MAIN/ssds.md)
 - Simulation: Continue working on Network Switches/Docking
 - More Statistics & Paper Reading
 
