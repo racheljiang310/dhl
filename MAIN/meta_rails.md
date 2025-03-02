@@ -40,6 +40,8 @@
 6. Data sharing occurs now
 7. Once cart is done, docking station pushes meta rail out and cart will continue its same direction/motion until it reaches the right end, in which the right end cart home will preconfigure its next route back to the cart home on the left OR a new destination if a server requests for it
 
+![Lazy Carts](https://github.com/user-attachments/assets/b80e05ad-d458-47c2-9ced-8e01c07cc761)
+
 <img width="400" alt="Most Straight" src="https://github.com/user-attachments/assets/2768c2d2-470b-4a24-9ab3-48e28d3f7c81" />
 
 > Note: This one might be easiest to implement because we don't have to worry about switching en-route. However, this also means the path the cart takes isn't going to be the most optimal (especially for return trips), but we can trade this off for a faster cart speed since we can just send it without need to worry about slowing down to make a network switch
