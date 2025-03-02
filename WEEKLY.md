@@ -1,4 +1,30 @@
 # Weekly Research Progress Update
+---
+
+**Name:** [Rachel Jiang]  
+**Research Topic:** [DHL]  
+**Week:** [8]: Feb 29
+
+---
+
+## 1. **Overview of Progress**
+
+This week progress: 🌊
+
+- continuing work on network switching simulation (using Unity bc Unreal Engines takes 56 GB to download)
+- continued working on diagrams on datacenter and sever-cart communication, definitely open to feedback and modifications link
+- read more papers on regenerative breaking, this time on one developed by China, where a team used a super capacitor storage system for their regenerative breaking link
+regenerative breaking cost-benefit analysis between battery & super capacitor storage system link
+- visualization of network switching, currently trying to make multiple versions and weighting the pros and cons
+- researching more into SSDs and how it communicates with the host server
+
+---
+
+## 2. **Next Steps**
+For the upcoming week, I plan to:
+- API: work on some diagrams for this
+- Simulation: Continue working on Network Switches/Docking
+- More Statistics & Paper Reading
 
 ---
 
