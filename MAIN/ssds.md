@@ -136,7 +136,7 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 
 ---
 
-## 3D Stacking NAND Flash
+## Abstraction Layers
 
 ####  Way 1: Buy it [Micron’s 232-layer 3D NAND](https://dmassets.micron.com/is/image/microntechnology/gcm-1019003-infographic-232l-nand-540x340px-v2?ts=1730186089519&dpr=off)
 - [Info](https://www.micron.com/products/storage/nand-flash/232-layer-nand)
@@ -174,6 +174,24 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 4. Hardware Design
 * FPGA Prototyping: test controller on an FPGA before moving to an ASIC design
 * Custom PCB: Routing high-speed NAND and PCIe signals requires careful layout design
+
+---
+
+## [PCI Express](https://computer.howstuffworks.com/pci-express.htm)
+> Peripheral Component Interconnect (PCI): bus is a channel or path between the components in a computer. Part of the slower bus that is responsible for communicating with hard disks and sound cards. Provides **direct access to system memory** for connected devices, but uses a **bridge to connect** to the frontside bus and, thus, to the CPU
+ 
+- Peripheral Component Interconnect Express (PCIe):
+  - Purpose: direct connection between two devices (nodes) on the bus is established while they are communicating with each other (point-to-point system)
+    - better performance and scalable, enable parallel connections
+    - <#>x connection: # lanes to carry data
+    - AGP graphics card slots have PCI-Express 16x slots => more lanes
+
+
+<img width="200" alt="PCIe" src="https://github.com/user-attachments/assets/b06c5f9a-e05e-468c-802a-28a9690e9b19" />
+
+<img width="200" alt="PCIe" src="https://github.com/user-attachments/assets/48244d5a-e783-4053-9161-dd835dc78dbf" />
+
+> Conclusion: Probably won't be able to connect all 64 SSDs to a server, nor should it since data won't be THAT big. We'll need a way to sort out the SSDs we don't need. Also, if we want parallel connections so that multiple servers can access the same data from the same rack, we need to consider the limitations of the SSD card. I'd estimate it ~ 4-16 parallel connections rn, but it's not a huge problem. 
 
 ---
 
