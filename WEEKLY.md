@@ -11,7 +11,7 @@
 
 This week progress: 🌊
 
-- continuing work on network switching simulation (using Unity bc Unreal Engines takes 56 GB to download)
+- continuing work on network switching [simulation](https://github.com/racheljiang310/dhl/blob/main/MAIN/simulation.md) (using Unity bc Unreal Engines takes 56 GB to download)
 - continued working on diagrams on datacenter and sever-cart communication, definitely open to feedback and modifications [link](https://github.com/racheljiang310/dhl/blob/main/MAIN/integration.md)
 - read more papers on regenerative breaking, this time on one developed by China, where a team used a super capacitor storage system for their regenerative breaking link
 regenerative breaking cost-benefit analysis between battery & super capacitor storage system link
