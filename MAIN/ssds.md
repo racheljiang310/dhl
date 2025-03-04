@@ -14,6 +14,7 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
 |-------------------|-----------| -------- |
 | <img width="200" src="https://github.com/user-attachments/assets/f536b552-a6ee-4d73-8c12-bd94e2309689" /> | <img width="200" src="https://github.com/user-attachments/assets/d1cc649f-d08d-4936-999a-4eb69d57b575" />| <img width="200" src="https://github.com/user-attachments/assets/0b98469a-e0fd-4692-8e35-8471d55d2743" /> |
 
+Our chosen M.2: PCIe NVMe
 
 ----
 ## M.2 Components [1TB storage]
