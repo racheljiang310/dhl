@@ -6,7 +6,8 @@ Define: compact, high-performance storage device commonly used in modern computi
 ----
 ## M.2 Form Factor
 
-Shape and Size: M.2 SSDs are rectangular with length (first two digits = the width in mm, last two represent the length).
+Shape and Size: M.2 SSDs are rectangular with length (first two digits = the width in mm, last two represent the length). **They are installed directly to motherboard**
+
 Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their supported interfaces (e.g., SATA, PCIe NVMe).
 
 |          |     |     |
