@@ -187,10 +187,12 @@ Keying: M.2 SSDs have notches (keys) on the edge connector to indicate their sup
     - <#>x connection: # lanes to carry data
     - AGP graphics card slots have PCI-Express 16x slots => more lanes
 
+|      |   |
+|-------------------|------- |
+| <img width="250" alt="PCIe" src="https://github.com/user-attachments/assets/b06c5f9a-e05e-468c-802a-28a9690e9b19" /> | <img width="200" alt="PCIe" src="https://github.com/user-attachments/assets/48244d5a-e783-4053-9161-dd835dc78dbf" />  |
 
-<img width="200" alt="PCIe" src="https://github.com/user-attachments/assets/b06c5f9a-e05e-468c-802a-28a9690e9b19" />
 
-<img width="200" alt="PCIe" src="https://github.com/user-attachments/assets/48244d5a-e783-4053-9161-dd835dc78dbf" />
+
 
 > Conclusion: Probably won't be able to connect all 64 SSDs to a server, nor should it since data won't be THAT big. We'll need a way to sort out the SSDs we don't need. Also, if we want parallel connections so that multiple servers can access the same data from the same rack, we need to consider the limitations of the SSD card. I'd estimate it ~ 4-16 parallel connections rn, but it's not a huge problem. 
 
