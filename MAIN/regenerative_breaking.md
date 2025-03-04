@@ -84,6 +84,7 @@ C. As per case B, but + n-storage systems, in correspondence to the ESSs situate
 
 | <img src="https://github.com/user-attachments/assets/52aa4450-f364-459d-8edb-cfe30e7b6a77" />  |   <img src="https://github.com/user-attachments/assets/afba64e8-a703-4c06-bd3c-ea080a6bf7eb" /> |
 |---|---|
+> “Total ESS Energy”, i.e. the total energy absorbed by the railroad summing up the absorptions of all the ESS’s, and the “Recovered energy”, i.e. the total flow of energy recovered into catenary by trains
 
 
 #### Stationary Supercapacitators Configurations
@@ -91,7 +92,9 @@ C. As per case B, but + n-storage systems, in correspondence to the ESSs situate
 ##### _Stationary Supercapacitators Results_
 
 - Annual energy saving, obtainable as weighted average of hourly consumptions, are therefore almost equivalent between the two storage configurations.
-<img src="https://github.com/user-attachments/assets/10a9e48c-b65a-4d4a-a698-a0b69a7831d9" />
+
+| <img src="https://github.com/user-attachments/assets/10a9e48c-b65a-4d4a-a698-a0b69a7831d9" />  |   <img src="https://github.com/user-attachments/assets/e1483809-63ca-412c-b02c-f7dee207164c" /> |
+|---|---|
 
 ### Cost-Benefit Analysis
 
