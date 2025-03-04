@@ -11,6 +11,9 @@ Rails on Rails Simulation
 04 March, 2025
 Found: [OpenModelica](https://openmodelica.org/)
 
+<img src="https://github.com/user-attachments/assets/0e0190a7-2817-4fb4-8629-2bb279d56953" />
+
+
 03 March, 2025
 <img alt="Second Update" src="https://github.com/user-attachments/assets/ef23ea36-498a-46c9-bd2f-4c9a4ec0c478" />
 
