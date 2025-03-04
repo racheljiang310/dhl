@@ -49,7 +49,23 @@ Look into: RB energy feedback system (RBEFS)
 
 ### [Stationary and on-board storage systems to enhance energy and cost efficiency of tramways](https://www.sciencedirect.com/science/article/pii/S037877531400562X)
 
-### Lithium Battery Configurations
+> study inspired by a real tramline located in the northern part of Italy (Bergamo)
+> total line length ~ 12 km, 10 Substations (ESSs)
+> no. of operating trams: rush hours (10 trains), low load hours (5 trains), holidays (3 trains)
+
+| <img src="https://github.com/user-attachments/assets/a2162207-cc9c-4a45-aac1-c92860b616d9" />  |<img src="https://github.com/user-attachments/assets/be74b769-4d0c-43ac-b5dd-26b9cba9f9f2" /> |<img src="https://github.com/user-attachments/assets/0e5de3f6-9771-4ee1-a958-6582937056af" /> |
+|--|--|--|
+
+This paper analyses and compares the following variants:
+- Stationary high-power lithium batteries
+- Stationary supercapacitors
+  - may require the presence of the DC/DC converter, since the charge/discharge processes imply rather large voltage variations
+- High-power lithium batteries on-board trains. (We won't be entertaining this idea)
+- Supercapacitors on-board trains. (We won't be entertaining this idea)
+
+### Configuration with/without the DC/DC converter
+
+#### Lithium Battery Configurations
 
 A. Trams dissipate all the braking energy in on-board resistors.
 
@@ -60,7 +76,7 @@ C. As per case B, but + n-storage systems, in correspondence to the ESSs situate
   - Baseline: braking energy is sent into the catenary as long as the local voltage is **within** limits (for our application 900 V)
   - Advanced: when the contact line voltage reaches 900 V the energy recovery is not stopped, but **reduced to exactly**
 
-#### _Lithium Battery Results_
+##### _Lithium Battery Results_
 - "an increase in the energy recovered does not automatically translate in a reduction in the energy absorbed by the railroad"
 - with equal # of storages => "advanced control the energy saving is **three times** respect to the baseline control using one storage, two times using two storages, around 1.4 times with three."
 - "baseline control, the minimum recommended storage-tostorage distance is around 2.0 km."
@@ -70,9 +86,9 @@ C. As per case B, but + n-storage systems, in correspondence to the ESSs situate
 |---|---|
 
 
-### Stationary Supercapacitators Configurations
+#### Stationary Supercapacitators Configurations
 
-#### _Stationary Supercapacitators Results_
+##### _Stationary Supercapacitators Results_
 
 - Annual energy saving, obtainable as weighted average of hourly consumptions, are therefore almost equivalent between the two storage configurations.
 <img src="https://github.com/user-attachments/assets/10a9e48c-b65a-4d4a-a698-a0b69a7831d9" />
