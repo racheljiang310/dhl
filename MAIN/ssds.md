@@ -116,25 +116,19 @@ Our chosen M.2: PCIe NVMe
 
 | Component         |  Weight   |   Notes  |
 |-------------------|-----------| -------- |
-| NAND Flash Memory | 4-16 grams| 3D TLC   |
+| NAND Flash Memory | 2-3 grams | 3D TLC   |
 | Controller        | .5-1 gram |Phison E18|
-| DRAM Cache        | .5-1 gram |  No      |
 | PCB               | 2-4 grams |          |
-| Voltage Regs      | .5-1 gram |          |
-| Thermal Solutions | 5-10 grams| Heat sink / thermal pad|
-| Interface Connect | .5-1 gram |          |
+| Thermal Solutions | 1-2 gram  |          |
 | Others            | .5-1 gram |          |
-| Total             | 10-30 g   |          |
+| Total             | 5.6699 g  |          |
 
 ---
 
-1. Removing Heatsink: saves 5-10 grams
-2. Removing DRAM Cache: saves .5-1 gram (not really worth it in terms of mass) [future me: no]
-3. Simplified controller: reduce power consumption/heat generation
-  - removing ECC
-  - removing heat sink management
-  - remove cache management
-4. Simplifying PCB: harder to do, but could still save a little
+1. Removing Heatsink: saves 1-2 grams => ~26% less weight
+2. Removing DRAM Cache: putting in server?
+3. Simplifying PCB: harder to do, but could still save a little
+   - move everything except NAND Flash into a separate server
 
 ---
 
