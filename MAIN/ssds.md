@@ -193,9 +193,74 @@ Our chosen M.2: PCIe NVMe
 | <img width="250" alt="PCIe" src="https://github.com/user-attachments/assets/b06c5f9a-e05e-468c-802a-28a9690e9b19" /> | <img width="200" alt="PCIe" src="https://github.com/user-attachments/assets/48244d5a-e783-4053-9161-dd835dc78dbf" />  |
 
 
+![Diagram](https://github.com/user-attachments/assets/adc84feb-c4da-428a-a8c6-84bb485606bc)
+
+### Sabrent Rocket 4 Plus Specifications
 
 
-> Conclusion: Probably won't be able to connect all 64 SSDs to a server, nor should it since data won't be THAT big. We'll need a way to sort out the SSDs we don't need. Also, if we want parallel connections so that multiple servers can access the same data from the same rack, we need to consider the limitations of the SSD card. I'd estimate it ~ 4-16 parallel connections rn, but it's not a huge problem. 
+ID: [SB-RKT4P-8TB](https://sabrent.com/products/sb-rkt4p-8tb?srsltid=AfmBOops0yv--a80HDYT8LTAexQQRMF_1FsjHBC4-u2ej1oCHU2Ach77)
+
+Package: M.2
+Description: NVMe PCIe M.2 | along with 176L or newer TLC. [more](https://www.techpowerup.com/ssd-specs/sabrent-rocket-4-plus-8-tb.d543)
+Controller: Phison's E18 controller with DRAM
+Requirements: motherboard with an available M.2 socket that supports a NVMe drive OR enclosure/adapter. Backward compatible with PCIE 3.0/2.0 with < 4 lanes, but bandwidth limited
+
+BW Seq: Up to 7,100/6,000 MB/s Seq. Read/Write
+Storage Size: 8TB total
+
+Dimensions: 
+- Width: 0.86 in
+- Height: 0.11 in
+- Length: 3.15 in
+  
+Areas: 2.709 in^2
+Weight: 5.67
+
+Power Draw:	
+- 0.80 W (Idle)
+- 5.7 W (Avg)
+- 8.7 W (Max)
+
+#### NAND Flash:
+- 8 Dies per Chip (1 Chip, 1TB)
+- 2 Planes per Die
+- Block Size: 1344 Pages
+- Page Size: 16 KB
+
+- Toggle:	4.0
+- Technology: 112-layer
+- Word Lines: 128 per NAND String
+
+#### Performance
+- Sequential Read:	7,400 MB/s
+- Sequential Write:	6,600 MB/s
+- Random Read:	650,000 IOPS
+- Random Write:	1,000,000 IOPS
+- Endurance:	6000 TBW
+- 
+
+#### Component: DRAM Cache (DDR4-2666 CL19)
+- SK Hynix H5AN8G6NCJR-VKC
+- Capacity: 2048 MB
+  
+#### Component: Phison E18 (PS5018-E18-41)
+Phison E18 is a System-on-Chip (SoC) designed to manage PCIe Gen4 SSDs efficiently
+- Main Processor: Triple-core ARM Cortex-R5 | CoXProcessor 2.0
+- Memory Interface: DRAM for mapping tables, metadata, and wear leveling
+  - Some use **DRAM-less HMB (Host Memory Buffer)**
+- NAND Flash Interface: 8 NAND channels, TLC (in our case)
+- Error Correction & Data Management: 4th Gen LDPC ECC
+- PCIe & NVMe Interface: PCIe 4.0 x4 lanes, NVMe 1.4 compliance
+- Power Management & Thermal Control: Thermal throttling, PMU
+
+#### Component: Software/Firmware
+- SSD Firmware (FW): FTL, ECC, Data Protection (RAID-like NAND redundancy), caching, APST
+- NVMe drivers build into modern OSes
+
+#### Resources
+- nvme-cli => interact with NVMe devices, send raw commands to SSD [source](https://nvmexpress.org/open-source-nvme-management-utility-nvme-command-line-interface-nvme-cli/)
+- libnvme: C lib with API interfacing with NVMe
+- Linux NVMe driver: Linux kernel => custom software to interface with NVMe
 
 ---
 
