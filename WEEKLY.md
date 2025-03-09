@@ -1,5 +1,33 @@
 # Weekly Research Progress Update
 ---
+**Name:** [Rachel Jiang]  
+**Research Topic:** [DHL]  
+**Week:** [9]: Mar 7
+
+---
+
+## 1. **Overview of Progress**
+
+This week progress: 👵🏼
+
+- continuing work on overall [simulation](https://github.com/racheljiang310/dhl/blob/main/MAIN/simulation.md) (using Unity)
+- received feedback from Prof on network switches, modified ideas & open to more feedback [link](https://github.com/racheljiang310/dhl/blob/main/MAIN/meta_rails.md)
+- more research into SSDs, specifically into the datasheets and specs for a Rocket 4 Plus SSD (8TB)
+
+Prof feedback on SSDs
+- cache and control logic doesn't have to be in the carts, we can move them to servers & just keep raw flash mem in carts
+- reference: Apple Studio
+
+---
+
+## 2. **Next Steps**
+For the upcoming week, I plan to:
+- Create a mapping for server to access data with the addition of inserting carts in the middle. Potentially adding to FTL or adding to existing cache
+- pause on simulation, need to confirm final schema with team before continuing
+- SSDs figure out how to detatch SSD controller from SSD & still have things work when server accesses data
+- some calculations with respect to energy, speed, and efficiency when using a Rocket 4 Plus SSD (8TB)
+
+---
 
 **Name:** [Rachel Jiang]  
 **Research Topic:** [DHL]  
