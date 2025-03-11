@@ -130,6 +130,8 @@ Our chosen M.2: PCIe NVMe
 3. Simplifying PCB: harder to do, but could still save a little
    - move everything except NAND Flash into a separate server
 
+Details: [SSD Review](https://www.thessdreview.com/featured/sabrent-rocket-4-plus-8tb-ssd-review-worlds-highest-capacity-and-fastest-retail-ssd/)
+
 ---
 
 ## Abstraction Layers
