@@ -14,6 +14,13 @@
 
 ![RORF](https://github.com/user-attachments/assets/17a15909-7b68-4da7-b2f2-13d571030244)
 
+Assumptions to make
+1. Shot at a constant angle: 45 degrees
+2. 64 SSDs per cart => account for weight of system = mass of cart + mass of SSDs
+3. Mass of Rails: maybe important
+4. Assume the regular speed of the cart is ~100 m/s
+5. Goal: find force required to shoot the cart
+
 ---
 
 ### Idea 1: 1-Cart Hovering Roundabouts (A little imaginative, but not impossible)
