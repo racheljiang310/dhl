@@ -231,7 +231,6 @@ Power Draw:
 - Random Read:	650,000 IOPS
 - Random Write:	1,000,000 IOPS
 - Endurance:	6000 TBW
-- 
 
 #### Component: DRAM Cache (DDR4-2666 CL19)
 - SK Hynix H5AN8G6NCJR-VKC
