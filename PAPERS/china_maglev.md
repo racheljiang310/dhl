@@ -18,9 +18,30 @@
 
 ---
 
-"The designed maximum operating speed of the Medium-low Speed Maglev Train test line is 100 km/h, and the formation form is composed of two cars with a coach
-and four coaches without a coach in series in the middle. The total load of the whole train is 209.1t[6], and the technical requirements related to the braking performance of the maglev train are as follows: "
+"The designed maximum operating speed of the Medium-low Speed Maglev Train test line is 100 km/h, and the formation form is composed of two cars with a coach and four coaches without a coach in series in the middle. The total load of the whole train is 209.1t[6], and the technical requirements related to the braking performance of the maglev train are as follows: "
 - "The emergency braking distance is less than 300m when the initial braking speed is 100 km/h;"
 - "The average deceleration of service braking (regenerative braking) is greater than 1.1 m/s2."
 
 "When train regenerative braking, the traction motor is transformed into a generator that converts the kinetic energy of the train into electric energy. In the meantime,the generated electric energy returns to the DC power grid and is used by the electric appliances on the train. It can be calculated that if the maximum DC grid voltage of this type of maglev train is not more than 1750V when braking, the maximum instantaneous current to be absorbed in the design of braking resistance or absorption energy storage system should be about 1200A, and the maximum instantaneous absorbed power should be about 3.6MW. Furthermore, it is estimated that the continuous current absorbed by the energy storage system or consuming resistor is about 800A under this condition"
+
+---
+
+### Primary methods of levitating train
+
+Source: [link](https://www.youtube.com/watch?v=S4L_0CDsd1I&ab_channel=RealEngineering)
+
+1. Pull via attraction: Electromagnetic Suspension (EMS) - **Active System**
+-  $F = 1/R^2$ => train needs active controls and feedback loops to ensure gaps stay between range
+-  Use Cases: Shanghai 30km maglev
+
+2. Push via repulsion - **Passive System**
+- Only works when train is going fast => wheels when slow, levitate when fast
+- Linear motors: attract and repel train with precise timing
+  - in reverse => regenerative breaking
+  - airbreak to slow the train down @ top speeds
+  - linear-induction coil (electromagnetic coils) to collect power from changing magnetic fields
+- No control inputs required, more stable
+- Caveats: Temperature must be cooled, really cold
+  - Thermoacoustic Coolers => look into if using this idea
+- Use Cases: Japanese SC Maglev: L0 (coming in 2027) - Chio Shinkansen Line
+
