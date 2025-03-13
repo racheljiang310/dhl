@@ -127,6 +127,14 @@ Results: "The results show that the regenerative levitation case with maximum le
 
 <img width="1186" src="https://github.com/user-attachments/assets/99db0b53-0841-4f93-9097-25e5da036e5b" />
 
+----
+
+## Regenerative Breaking in EVs
+
+Equations
+
+$\eta_{gen} = \frac{W_{out}}{W_{in}}$ \\
+$P_{gen} = \frac{\eta_{gen}mv^2}{2\Delta t}$ \\
 
 
 
