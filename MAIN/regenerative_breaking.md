@@ -133,8 +133,18 @@ Results: "The results show that the regenerative levitation case with maximum le
 
 Equations
 
-$\eta_{gen} = \frac{W_{out}}{W_{in}}$ \\
-$P_{gen} = \frac{\eta_{gen}mv^2}{2\Delta t}$ \\
+- $\eta_{gen} = \frac{W_{out}}{W_{in}}$
+  - $eta_{gen}$ = efficieny of the generator
+  - Work out : Work in
+- $P_{gen} = \frac{\eta_{gen}mv^2}{2\Delta t}$
+  - $P_{gen}$ = power produced by generator
+  - t = amount of time car takes to break
+  - m = mass of car
+  - v = initialixe velocity
+- $n_{batt} = \frac{P_{out}}{P_{in}}$
+  - $P_{in} = P_{gen}$
+  - $P_{out} = \frac{W_{out}}{\Delta t}$
+  - $W_{out} =  \frac{n_{batt}n_{gen}mv^2}{2}$
 
 
 
