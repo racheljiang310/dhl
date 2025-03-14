@@ -2,6 +2,34 @@
 ---
 **Name:** [Rachel Jiang]  
 **Research Topic:** [DHL]  
+**Week:** [10]: Mar 14 🥧
+
+---
+
+## 1. **Overview of Progress**
+
+This week progress: Happy 🥧 Day!
+
+- pause on simulation
+- updated Cart Mass Calculations spreadsheet:
+  - targeting Rocket 4 Plus SSD (8TB), specific mass is really hard to find, so I estimated based on finding common density and dimensions of some parts
+  - calculated estimations for power consumption and recovery via tweaking parameters
+  - link to [calculations](https://docs.google.com/spreadsheets/d/1-Co3nxuuoy1GcUiEevEvnTI8xphWBnEozjH-1yfd05E/edit?gid=0#gid=0)
+- Studied SCMaglev vs China's Shanghai Maglev: different implementations, consider how we can boost regenerative breaking capabilities & reduce power consumption
+
+---
+
+## 2. **Next Steps**
+For the upcoming week, I plan to:
+- look into raw NAND memory like Apple Studio
+- do research on SCMaglev's implementation & find ways we can boost power recovery to power usage ratio
+  - consider issues that SCMaglev is currently facing: cooling, regenerative breaking, wheels-then-levitate
+- expand spreadsheet such that we can find optimal parameters to maximize the power recovery to power usage ratio
+
+---
+
+**Name:** [Rachel Jiang]  
+**Research Topic:** [DHL]  
 **Week:** [9]: Mar 7
 
 ---
