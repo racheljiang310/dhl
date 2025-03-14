@@ -3,8 +3,15 @@
 Weekly updates on simulation will be added here, since most of it will just be pictures and follow ups
 
 ---
+## Spreadsheet Calculations
 
-Rails on Rails Simulation
+| Chart 1  | Chart 2 | Chart 3 |
+| -------- | ------- |------- |
+|  <img src="https://github.com/user-attachments/assets/bfdaa059-6fbe-4604-90d2-6f1631c84d2f" /> |  <img src="https://github.com/user-attachments/assets/05eb1442-c6d5-408f-b98a-340b562b2d2e" />   | <img src="https://github.com/user-attachments/assets/d2d5f781-b972-4804-8828-1c8b2d2e9edc" /> |
+
+---
+
+## Rails on Rails Simulation
 > Using Unity 3D Universal Renderer to create the simulation. Will consist of minimal properties, taking into account
 > weight, gravity, electromagnetic forces, and more.
 
