@@ -15,6 +15,7 @@ This week progress: Happy 🥧 Day!
   - targeting Rocket 4 Plus SSD (8TB), specific mass is really hard to find, so I estimated based on finding common density and dimensions of some parts
   - calculated estimations for power consumption and recovery via tweaking parameters
   - link to [calculations](https://docs.google.com/spreadsheets/d/1-Co3nxuuoy1GcUiEevEvnTI8xphWBnEozjH-1yfd05E/edit?gid=0#gid=0)
+  - chart results [link](https://github.com/racheljiang310/dhl/blob/main/MAIN/simulation.md)
 - Studied SCMaglev vs China's Shanghai Maglev: different implementations, consider how we can boost regenerative breaking capabilities & reduce power consumption
 
 ---
