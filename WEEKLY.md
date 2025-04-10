@@ -10,6 +10,8 @@
 
 This week progress: 🏁
 - Signed up for research units
+- SCMaglev (the [pictures](https://global.jr-central.co.jp/en/company/_pdf/superconducting_maglev.pdf) really helped me understand how the EDS system works)
+- Read into Paper #2 on [maglev_cobra.md]https://github.com/racheljiang310/dhl/blob/main/PAPERS/maglev_cobra.md] and extracted more specific conclusions about how we can maximize regenerative breaking (reduce deceleration, reduce incline, etc)
 
 ---
 
