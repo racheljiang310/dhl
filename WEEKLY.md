@@ -1,6 +1,57 @@
 # Weekly Research Progress Update
 ---
 **Name:** [Rachel Jiang]  
+**Research Topic:** [DHL UGrad Research]  
+**Week:** [1]: Apr 11 🥧
+
+---
+
+## 1. **Overview of Progress**
+
+This week progress: 🏁
+- Signed up for research units
+
+---
+
+## 2. **Next Steps**
+For the upcoming week, I plan to:
+- Get in touch with DHL team, get set up with weekly meeting
+
+---
+
+## 3. **Weekly Notes**
+Raw Nand from Mac Studio: memory chips used for storage without an integrated controller
+- Where: mounted directly onto the logic board
+- Controller? built into Apple’s custom processor (M1/M2 SoC)
+- Why?
+  - allows for bypass of standard SSD form factors
+  - higher bandwidth & power efficiency
+  - more control over performance and thermals
+
+SCMaglev's [implementation](https://global.jr-central.co.jp/en/company/_pdf/superconducting_maglev.pdf)
+
+<img width="670" src="https://github.com/user-attachments/assets/8f7b8259-a8fe-4358-872b-84112855c2bc" />
+
+| Propulsion  | Levitation  | Guidance |
+|---|---|---|
+| <img width="200" src="https://github.com/user-attachments/assets/a6f53b4e-9a4e-409b-a7c9-6a4250459c96" />| <img width="200" src="https://github.com/user-attachments/assets/6971b76e-41d0-4421-b489-fe42d13ac129" /> | <img width="200" src="https://github.com/user-attachments/assets/a6397fa5-bfb5-481f-b8dc-20b6b8ca7c18" />|
+- coil made of a Niobium-titanium alloy
+- electrodynamic suspension (EDS) system
+- cooled down to reach superconductivity
+
+Regenerative Breaking
+- electric torque changes direction, but the velocity maintains the same orientation
+- motor velocity is greater than synchronous velocity $v > v_s$
+- maximal regenerated energy formula: $P_{rotor} = \frac{V^2s}{R_2}$
+  - power transfer between rotor & stator
+  - stator loss & flux leakage are negligible
+  - $s = \frac{w_1}{w_2}$ where $w_1$ is the motor angular velocity and $w_2$ is the synchronous angular velocity
+  - $V$ is voltage
+  - $R_2$ is sum of the secondary resistance (due to the losses in copper, with the element that is the conversion of elec into mech energy)
+
+---
+
+**Name:** [Rachel Jiang]  
 **Research Topic:** [DHL]  
 **Week:** [10]: Mar 14 🥧
 
