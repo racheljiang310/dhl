@@ -2,7 +2,7 @@
 ---
 **Name:** [Rachel Jiang]  
 **Research Topic:** [DHL UGrad Research]  
-**Week:** [1]: Apr 11 🥧
+**Week:** [2]: Apr 11 🥧
 
 ---
 
