@@ -23,7 +23,8 @@ For the upcoming week, I plan to:
 ---
 
 ## 3. **Weekly Notes**
-
+- Interesting article: [optimize regen break](https://www.sciencedirect.com/science/article/pii/S235214652300279X)
+  
 ---
 **Name:** [Rachel Jiang]  
 **Research Topic:** [DHL UGrad Research]  
