@@ -2,6 +2,31 @@
 ---
 **Name:** [Rachel Jiang]  
 **Research Topic:** [DHL UGrad Research]  
+**Week:** [3]: Apr 18 🥧
+
+---
+
+## 1. **Overview of Progress**
+
+This week progress: 👾
+- outlining how software could look like (what is inventory, what is the response/request protocol, etc)
+- see [doc](https://github.com/racheljiang310/dhl/blob/main/MAIN/software_ideas.md)
+- not much done relative to other weeks, but will be picking up more next week as we finalize on group meeting date
+
+---
+
+## 2. **Next Steps**
+For the upcoming week, I plan to:
+- set up with weekly meeting with DHL team
+- continue working on software api ideas
+
+---
+
+## 3. **Weekly Notes**
+
+---
+**Name:** [Rachel Jiang]  
+**Research Topic:** [DHL UGrad Research]  
 **Week:** [2]: Apr 11 🥧
 
 ---
