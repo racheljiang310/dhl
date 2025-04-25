@@ -12,7 +12,8 @@ This week progress: 👾
 - met with team, setup weekly meeting time
 - e-waste digging: unfortunately no ssds, so looked towards simulators/emulators online
 - found: [MQSim](https://github.com/CMU-SAFARI/MQSim), [SSD-Guide](https://github.com/mikeroyal/SSD-Guide), and [SimpleSSD](https://docs.simplessd.org/en/v2.0.12/instructions/start.html)
-- on the contray, SimpleSSD is in fact NOT easy for those using MacOS + Docker containers, lots of build issues [TypeErrors, etc]
+- on the contray, SimpleSSD is in fact NOT easy for those using MacOS + Docker containers, lots of build issues (TypeErrors, etc)
+  - ultimately was not able to get it building, kept throwing errors, need to look into why this is happening
 - found: ROS (Robot Operating System) for carts: [link](https://articulatedrobotics.xyz/tutorials/ready-for-ros/what-you-need-for-ros)
 
 ## 2. **Next Steps**
