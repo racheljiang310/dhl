@@ -15,6 +15,7 @@ This week progress: 👾
 - on the contray, SimpleSSD is in fact NOT easy for those using MacOS + Docker containers, lots of build issues (TypeErrors, etc)
   - ultimately was not able to get it building, kept throwing errors, need to look into why this is happening
 - found: ROS (Robot Operating System) for carts: [link](https://articulatedrobotics.xyz/tutorials/ready-for-ros/what-you-need-for-ros)
+- created [orchestrator](https://github.com/racheljiang310/dhl/tree/main/orchestrator) directory to start thinking about how we want cart server to work
 
 ## 2. **Next Steps**
 For the upcoming week, I plan to:
