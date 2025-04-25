@@ -1,0 +1,10 @@
+{
+    "gpt2_corpus/train/raw":{
+        "carts": [
+            {
+                "cart-id": 0,
+                "zone": 5
+            }
+        ]
+    }
+}
