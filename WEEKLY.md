@@ -11,7 +11,8 @@
 This week progress: 👾
 - found freely-distributed f2fs via cloning `https://kernel.googlesource.com/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools`
   - not sure what I can do with this for now, but will be taking notes
-- 
+  - intro link: [guide](https://docs.kernel.org/filesystems/f2fs.html)
+- ROS
 
 ## 2. **Next Steps**
 For the upcoming week, I plan to:
