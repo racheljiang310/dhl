@@ -1,5 +1,26 @@
 # Weekly Research Progress Update
 ---
+# Week 5
+---
+**Name:** [Rachel Jiang]  
+**Research Topic:** [DHL UGrad Research]  
+**Week:** [5]: May 2 🥧
+
+## 1. **Overview of Progress**
+
+This week progress: 👾
+- found freely-distributed f2fs via cloning `https://kernel.googlesource.com/pub/scm/linux/kernel/git/jaegeuk/f2fs-tools`
+  - not sure what I can do with this for now, but will be taking notes
+- 
+
+## 2. **Next Steps**
+For the upcoming week, I plan to:
+- continue digging through ewaste bins
+
+## 3. **Weekly Notes**
+- I need to read this article: [optimize regen break](https://www.sciencedirect.com/science/article/pii/S235214652300279X)
+- More links: [learn ssd](https://github.com/mikeroyal/SSD-Guide?tab=readme-ov-file#SSD-learning-resources)
+---
 # Week 4
 ---
 **Name:** [Rachel Jiang]  
