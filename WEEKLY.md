@@ -21,6 +21,28 @@ For the upcoming week, I plan to:
 ## 3. **Weekly Notes**
 - [X] I need to read this article: [optimize regen break](https://www.sciencedirect.com/science/article/pii/S235214652300279X)
 - [ ] More links: [learn ssd](https://github.com/mikeroyal/SSD-Guide?tab=readme-ov-file#SSD-learning-resources)
+
+#### Meeting Notes
+Parameters for Simulation: Simulator recieves `config`
+- Number of cards total
+- Cart: acceleration/decceleration
+- dataset size in TeraByte/PetaByte
+- Number of Rails: 1 rail => constant
+- SSD: max-speed, length, weight (constant)
+- number ssds/card (64, etc.) => gives you weight
+- Number of copies of each dataset => assume 1 for now
+- Docking Station: number per node (server), time for docking/undocking period (3 seconds)
+
+Simulation: needs a trace (collection of orders) OR Astrasim
+- TIME 1: Node A: SSD3
+- TIME 2: Node B: SSD25
+- TIME 3: NODE B: SSD3 => conflict with TIME 1's request => will BLOCK => output for time blocked
+
+Ouput:
+- N launches
+- total time it took
+- time blocked
+
 ---
 # Week 4
 ---
