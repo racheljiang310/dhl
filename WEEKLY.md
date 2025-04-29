@@ -45,8 +45,8 @@ For the upcoming week, I plan to:
 - continue digging through ewaste bins
 
 ## 3. **Weekly Notes**
-- I need to read this article: [optimize regen break](https://www.sciencedirect.com/science/article/pii/S235214652300279X)
-- Look into what `gem5` dependencies are
+- [ ] I need to read this article: [optimize regen break](https://www.sciencedirect.com/science/article/pii/S235214652300279X)
+- [ ] Look into what `gem5` dependencies are
   
 ---
 # Week 3
