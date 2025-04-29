@@ -47,8 +47,8 @@ def dispatch():
     })
 
 # Can do 2 things: simply fetches carts/locations OR calls dispatch
-@app.route('/fetch_data', methods=['GET'])
-def fetch_data():
+@app.route('/fetch', methods=['GET'])
+def fetch():
     filepath = request.args.get('filepath')
     fetched_data = load_cache()
 
