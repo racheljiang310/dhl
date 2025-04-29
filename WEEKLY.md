@@ -25,6 +25,7 @@ For the upcoming week, I plan to:
 #### Meeting Notes
 Parameters for Simulation: Simulator recieves `config`
 - Number of cards total
+- processing time => ML model uses data
 - Cart: acceleration/decceleration
 - dataset size in TeraByte/PetaByte
 - Number of Rails: 1 rail => constant
@@ -42,6 +43,12 @@ Ouput:
 - N launches
 - total time it took
 - time blocked
+
+Construction:
+- timer / clock
+- hash / queue of when tasks are complete
+- schedule, waiting, processing queues
+- running queue
 
 ---
 # Week 4
