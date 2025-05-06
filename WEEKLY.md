@@ -1,5 +1,47 @@
 # Weekly Research Progress Update
 ---
+# Week 6
+---
+**Name:** [Rachel Jiang]  
+**Research Topic:** [DHL UGrad Research]  
+**Week:** [6]: May 6 🥧
+
+## 1. **Overview of Progress**
+
+This week progress: 👾
+- Orchestrator => "Cart Whisperer" server using sockets
+- Client => "Cart Whisperee" client that connects to socket
+
+
+## 2. **Next Steps**
+For the upcoming week, I plan to:
+- continue digging through ewaste bins
+- work on "cart whispherer"
+
+## 3. **Weekly Notes**
+- [ ] Program with sockets using python [here](https://www.geeksforgeeks.org/socket-programming-python/)
+- [ ] More links: [learn ssd](https://github.com/mikeroyal/SSD-Guide?tab=readme-ov-file#SSD-learning-resources)
+
+
+### Cart Whispherer Flow
+
+1. Connection Request (TCP)
+2. Connection Established, socket()
+3. [Server => Whisperer] `GET dataset_i`
+4. Request → Request Queue
+5. FIFO → Process Request
+6. Socket worker:
+   a. Query SSDs
+   b. Route cart (src → dest)
+   c. Add task to Dispatch Queue
+7. Dispatch Queue → +1 job
+8. Cart leaves → update "metadata"
+9. Cart returns → update "metadata"
+10. Close Connection
+
+#### Meeting Notes
+
+---
 # Week 5
 ---
 **Name:** [Rachel Jiang]  

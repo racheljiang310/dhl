@@ -1,78 +1,114 @@
-# MAIN API Server
-from flask import Flask, request, jsonify
+# SOCKET
+import argparse
+import asyncio
+import pathlib
+import socket
+
+# PARSING
 import json
 import time
-import os
-from datetime import datetime
 
-app = Flask(__name__)
-
-# Path to the dataset map JSON
-DATA_PATH = 'datasets'
-SCRIPTS_PATH = 'scripts'
-UTILS_PATH = 'utils'
-METADATA_PATH = 'metadata.json'
+# Constants
+MAX_CLIENT = 10
+DATA_PATH = 'datasets/'
 CACHE_PATH = 'cache.json'
-LOGS_PATH = 'logs/orchestrator.log'
+METADATA_PATH = 'metadata.json'
+menu = b'[?] Choose (1=check|2=dispatch|3=exit):\n'
 
 # Load mapping from cache
-def load_cache():
-    '''Cache JSON: "path": what we need '''
-    if os.path.exists(CACHE_PATH):
-        with open(CACHE_PATH, 'r') as f:
-            return json.load(f)
-    return {}
+# def load_cache():
 
-# Load data map from memory
-def load_memory(dataset):
-    if os.path.exists(DATA_PATH+f"/{dataset}"):
-        with open(DATA_PATH, 'r') as f:
-            return json.load(f)
-    return {}
+# METADATA
+def fetch_metadata(writer, cartid):
+    writer.write(f"Fetching metadata for: {METADATA_PATH}\n".encode())
+    path = pathlib.Path(METADATA_PATH)
+    if path.is_file():
+        writer.write(b"Metadata:\n")
+        writer.write(path.read_bytes())
+        # write to logs
+        return 
+    else:
+        raise Exception(f"Dataset doesn't exist: {path.decode()}".encode())
 
-@app.route('/dispatch', methods=['GET'])
-def dispatch():
-    filepath = request.args.get('filepath')
-    cart = request.args.get('cart-id')
-    location = request.args.get('zone')
-    # do some sanitization / validity checks here
+# DISPATCH
+def dispatch_cart(writer, path):
+    full_path = DATA_PATH + path.decode()
+    writer.write(f"Querying dataset: {full_path}\n".encode())
 
-    print("DISPATCHED CART")
+    path = pathlib.Path(full_path)
+    if path.is_file():
+        writer.write(f"Dataset: {path.decode()} dispatched\n".encode())
+        # write to logs
+        # update metadata
+        return 
+    else:
+        raise Exception(f"Dataset doesn't exist: {path.decode()}".encode())
 
-    return jsonify({
-        "status": "success",
-        "dataset": filepath,
-        "cart": cart-id,
-        "zone": location
-    })
+# HANDLER
+async def handler(reader, writer):
+    global menu
+    writer.write(b'Welcome to the Cart Whispherer Server!\n')
+    while True:
+        writer.write(menu)
+        await writer.drain()
 
-# Can do 2 things: simply fetches carts/locations OR calls dispatch
-@app.route('/fetch', methods=['GET'])
-def fetch():
-    filepath = request.args.get('filepath')
-    fetched_data = load_cache()
+        print("Sent menu")
+        option = (await reader.readline()).strip()
+        print(f"Got option: {option}")
 
-    if filepath not in fetched_data:
-        fetched_data = load_memory(filepath)
+        if option == b'1' or option == b'2':
+            if option == b'1':
+                writer.write(b'[?] Enter a cart id:\n')
+                await writer.drain()
+                cart = (await reader.readline()).strip()
+                fetch_metadata(writer, cart)
+            elif option == b'2':
+                writer.write(b'[?] Enter a dataset:\n')
+                await writer.drain()
+                dataset = (await reader.readline()).strip()
+                dispatch_cart(writer, dataset)
 
-    # TODO: do one more check here to ensure valid data found
+            writer.write(b'[?] Would you like to make another request? (Y/N):\n')
+            await writer.drain()
+            answer = (await reader.readline()).strip()
+            if answer == b'N':
+                break
+        elif option == b'3':
+            break
+        else:
+            writer.write(b'Invalid option. Choose again\n')
+            await writer.drain()
 
-    data_map = fetched_data[filepath]
-    carts = data_map["carts"]
+    writer.write(b'Closing connection...\n')
+    await writer.drain()
+    if writer.can_write_eof():
+        writer.write_eof()
 
-    return jsonify({
-        "status": "success",
-        "dataset": filepath,
-        "carts": carts
-    })
+# SERVE
+async def serve(host, port):
 
-# @app.route('/store_data', methods=['POST'])
-# @app.route('/create_data', methods=['POST'])
+    async def handle(reader, writer):
+        try:
+            await handler(reader, writer)
+        except Exception as e:
+            print(e)
 
+        writer.close()
+        await writer.wait_closed()
+
+    print(f"Startup routine...")
+    server = await asyncio.start_server(handle, host=host, port=port)
+
+    async with server:
+        await server.serve_forever()
+
+
+# CONFIGURE
 if __name__ == '__main__':
-    # Create folders if they don't exist
-    if not os.path.exists('datasets/'):
-        exit(1)
-
-    # open port 8080, over HTTP for simplicity reasons
-    app.run(port=8080, debug=True)
+    
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument('-h', '--host', type=str, default='127.0.0.1')
+    parser.add_argument('-p', '--port', type=int, default=8080)
+    args = parser.parse_args()
+    print(f"Configuring server on host {args.host} port {args.port}")
+    asyncio.run(serve(args.host, args.port))
