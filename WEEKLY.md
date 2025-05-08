@@ -9,14 +9,18 @@
 ## 1. **Overview of Progress**
 
 This week progress: 👾
-- Orchestrator => "Cart Whisperer" server using sockets
-- Client => "Cart Whisperee" client that connects to socket
+- Orchestrator => "Cart Whisperer" 
+  - successful server & client (sockets)
+  - now with logs
+  - correct metadata querying
+- Client => "Cart Whisperee" 
+  - client that connects to socket
 
 
 ## 2. **Next Steps**
 For the upcoming week, I plan to:
 - continue digging through ewaste bins
-- work on "cart whispherer"
+- continue work on "cart whispherer"
 
 ## 3. **Weekly Notes**
 - [ ] Program with sockets using python [here](https://www.geeksforgeeks.org/socket-programming-python/)

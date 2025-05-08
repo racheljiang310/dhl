@@ -11,7 +11,7 @@ async def communicate(reader, writer):
 
             line_decoded = line.decode().strip()
             print(line_decoded)
-
+            
             if line.startswith(b'[?]'):
                 response = input("> ")
                 writer.write((response + '\n').encode())

@@ -7,37 +7,66 @@ import socket
 # PARSING
 import json
 import time
+import datetime
 
 # Constants
 MAX_CLIENT = 10
 DATA_PATH = 'datasets/'
 CACHE_PATH = 'cache.json'
+LOGS_PATH = 'logs/orchestrator.log'
 METADATA_PATH = 'metadata.json'
 menu = b'[?] Choose (1=check|2=dispatch|3=exit):\n'
 
 # Load mapping from cache
 # def load_cache():
 
+def write_logs(action, d_type, data):
+    with open(LOGS_PATH, 'a') as file:
+        file.write(f"\n{datetime.datetime.now()}: {action} for {d_type}: {data}")
+
+def find_metadata_by_id(byte_text, cartid):
+    json_string = byte_text.decode('utf-8')
+    data = json.loads(json_string)["carts"]
+    if str(cartid) not in data:
+        return None
+    return data[str(cartid)]
+    
 # METADATA
-def fetch_metadata(writer, cartid):
-    writer.write(f"Fetching metadata for: {METADATA_PATH}\n".encode())
+async def fetch_metadata(writer, cartid):
     path = pathlib.Path(METADATA_PATH)
     if path.is_file():
-        writer.write(b"Metadata:\n")
-        writer.write(path.read_bytes())
-        # write to logs
+        response = b"Metadata: "
+        metadata = find_metadata_by_id(path.read_bytes(), cartid.decode())
+        if metadata == None:
+            response = b'Cart not found...\n'
+            writer.write(response)
+            await writer.drain()
+            write_logs("Failed Queried", "cart metadata", cartid.decode())
+            return 
+        response += b'id: '+str(metadata["id"]).encode() + b' | '
+        response += b'status: '+str(metadata["status"]).encode() + b' | '
+        response += b'size: '+str(metadata["size"]).encode() + b' | '
+        response += b'space: '+str(metadata["space"]).encode() + b'\n'
+        writer.write(response)
+        await writer.drain()
+        write_logs("Successfully Queried", "cart metadata", cartid.decode())
         return 
-    else:
-        raise Exception(f"Dataset doesn't exist: {path.decode()}".encode())
+    response = b"No Metadata\n"
+    writer.write(response)
+    await writer.drain()
+    write_logs("Failed Fetch to metadata", "cart metadata", cartid.decode())
+    return 
 
 # DISPATCH
-def dispatch_cart(writer, path):
+async def dispatch_cart(writer, path):
     full_path = DATA_PATH + path.decode()
     writer.write(f"Querying dataset: {full_path}\n".encode())
+    await writer.drain()
 
     path = pathlib.Path(full_path)
     if path.is_file():
         writer.write(f"Dataset: {path.decode()} dispatched\n".encode())
+        await writer.drain()
         # write to logs
         # update metadata
         return 
@@ -48,25 +77,26 @@ def dispatch_cart(writer, path):
 async def handler(reader, writer):
     global menu
     writer.write(b'Welcome to the Cart Whispherer Server!\n')
+    await writer.drain()
+
     while True:
         writer.write(menu)
         await writer.drain()
 
-        print("Sent menu")
         option = (await reader.readline()).strip()
-        print(f"Got option: {option}")
+        # print(f"Got option: {option}")
 
         if option == b'1' or option == b'2':
             if option == b'1':
                 writer.write(b'[?] Enter a cart id:\n')
                 await writer.drain()
                 cart = (await reader.readline()).strip()
-                fetch_metadata(writer, cart)
+                await fetch_metadata(writer, cart)
             elif option == b'2':
                 writer.write(b'[?] Enter a dataset:\n')
                 await writer.drain()
                 dataset = (await reader.readline()).strip()
-                dispatch_cart(writer, dataset)
+                await dispatch_cart(writer, dataset)
 
             writer.write(b'[?] Would you like to make another request? (Y/N):\n')
             await writer.drain()
