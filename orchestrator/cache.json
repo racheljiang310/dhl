@@ -1,9 +1,17 @@
 {
-    "gpt2_corpus/train/raw":{
+    "gpt2_corpus":{
         "carts": [
             {
                 "cart-id": 0,
                 "zone": 5
+            },
+            {
+                "cart-id": 1,
+                "zone": 2
+            },
+            {
+                "cart-id": 2,
+                "zone": 3
             }
         ]
     }

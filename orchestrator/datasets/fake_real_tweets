@@ -1,0 +1,9 @@
+{
+    "fake_real_tweets":
+    [
+        {
+            "cart-id": 0,
+            "type": "train"
+        }
+    ]
+}

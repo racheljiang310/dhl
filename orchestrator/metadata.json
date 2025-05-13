@@ -4,31 +4,29 @@
             "id": 0,
             "status": 0,
             "size": 64,
-            "space": 3000
+            "space": 3000,
+            "datasets": [
+                "fake_real_tweets",
+                "gpt2_corpus"
+            ]
         },
         "1": {
             "id": 1,
             "status": 0,
             "size": 64,
-            "space": 4000
+            "space": 4000,
+            "datasets": [
+                "gpt2_corpus"
+            ]
         },
         "2": {
             "id": 2,
             "status": 0,
             "size": 64,
-            "space": 5000
-        }
-    },
-    "datasets": {
-        "gpt2_corpus": {
-            "path": "datasets/gpt2_corpus",
-            "type": "text",
-            "copies": 3
-        },
-        "imagenet_v1": {
-            "path": "datasets/imagenet_v1",
-            "type": "images",
-            "copies": 1
+            "space": 5000,
+            "datasets": [
+                "gpt2_corpus"
+            ]
         }
     }
 }

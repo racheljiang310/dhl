@@ -1,5 +1,32 @@
 # Weekly Research Progress Update
 ---
+# Week 7
+---
+**Name:** [Rachel Jiang]  
+**Research Topic:** [DHL UGrad Research]  
+**Week:** [7]: May 16 🥧
+
+## 1. **Overview of Progress**
+
+This week progress: 👾
+- Orchestrator => "Cart Whisperer" 
+  - successful server & client (sockets)
+  - advanced print statements
+  - coroutines for dispatch successful
+  - updates to metadata upon dispatch
+
+## 2. **Next Steps**
+For the upcoming week, I plan to:
+- continue digging through ewaste bins
+- continue work on "cart whispherer"
+
+## 3. **Weekly Notes**
+- [ ] ...
+
+#### Meeting Notes
+- [ ] ...
+
+---
 # Week 6
 ---
 **Name:** [Rachel Jiang]  
