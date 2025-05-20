@@ -24,7 +24,10 @@ For the upcoming week, I plan to:
 - [ ] ...
 
 #### Meeting Notes
-- [ ] ...
+- [ ] Find optimal "batch" size
+- [ ] Assume batch size os the same
+- [ ] Figure out what needs to be in metadata so that the data server knows what it needs to read the correct "batch" in each cart & ssd
+- [ ] Implement ftl_wrapper
 
 ---
 # Week 7
