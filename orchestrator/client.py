@@ -11,11 +11,13 @@ async def communicate(reader, writer):
 
             line_decoded = line.decode().strip()
             print(line_decoded)
-            
-            if line.startswith(b'[?]'):
-                response = input("> ")
+
+            # Respond if line starts with [?]
+            if line_decoded.startswith('[?]'):
+                response = input("> ")  # You can replace with async input if needed
                 writer.write((response + '\n').encode())
                 await writer.drain()
+
     except asyncio.CancelledError:
         print("\nCommunication cancelled.")
     except Exception as e:

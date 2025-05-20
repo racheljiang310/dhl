@@ -1,5 +1,32 @@
 # Weekly Research Progress Update
 ---
+# Week 8
+---
+**Name:** [Rachel Jiang]  
+**Research Topic:** [DHL UGrad Research]  
+**Week:** [7]: May 23 🥧
+
+## 1. **Overview of Progress**
+
+This week progress: 👾
+- Orchestrator => "Cart Whisperer" 
+  - new "write" option to append datasets
+  - fixed bug of hanging client
+
+## 2. **Next Steps**
+For the upcoming week, I plan to:
+- continue digging through ewaste bins
+- need to update dataset json info if needed
+- need a remove option
+- start thinking about adding an extra layer above FTL
+
+## 3. **Weekly Notes**
+- [ ] ...
+
+#### Meeting Notes
+- [ ] ...
+
+---
 # Week 7
 ---
 **Name:** [Rachel Jiang]  

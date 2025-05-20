@@ -8,6 +8,7 @@ import socket
 import json
 import time
 import datetime
+import os
 
 # CONSTS
 DATA_PATH = 'datasets/'
@@ -22,13 +23,12 @@ def write_logs(action, d_type, data):
         file.write(f"\n{datetime.datetime.now()}: {action} for {d_type}: {data}")
 
 ######################################################################### PUSH DATASETS
-async def write_to_cart(writer, cartid, dname):
+async def write_to_cart(writer, cartid, dname, dsize):
     cart = None
     path_obj = pathlib.Path(METADATA_PATH)
     metadata = json.loads(path_obj.read_bytes().decode())
-
     for key, value in metadata["carts"].items(): # find cart obj
-        if str(cartid) == key:
+        if cartid == key:
             value["status"] = 1
             cart = value
             break
@@ -36,13 +36,13 @@ async def write_to_cart(writer, cartid, dname):
     if cart is not None:
         path_obj.write_text(json.dumps(metadata, indent=4))
         print(f"Starting coroutine for dispatching cart {str(cart["id"])}")
-        asyncio.create_task(dispatch(metadata, str(cart["id"]), 10, path_obj), dname)
-        write_logs("Successful Dispatch", "cart", cart["id"])
+        asyncio.create_task(dispatch(metadata, str(cart["id"]), 10, path_obj, dname, dsize))
+        write_logs("Successful dspatch", "cart", cart["id"])
         return 
     else:
         writer.write(b"Unexpected failure...\n")
         await writer.drain()
-        write_logs("Failed Dispatch to dataset", "dataset name", path.decode())
+        write_logs("Failed dispatch", "dataset name", path.decode())
 
 ######################################################################### METADATA
 def find_metadata_by_id(byte_text, cartid):
@@ -62,7 +62,7 @@ async def fetch_metadata(writer, cartid):
             response = b'Cart not found...\n'
             writer.write(response)
             await writer.drain()
-            write_logs("Failed Queried", "cart metadata", cartid.decode())
+            write_logs("Failed query", "cart metadata", cartid.decode())
             return 
         response += b'id: '+str(metadata["id"]).encode() + b' | '
         response += b'status: '+str(metadata["status"]).encode() + b' | '
@@ -72,23 +72,43 @@ async def fetch_metadata(writer, cartid):
             response += b'dataset: '+str(dset).encode() + b'\n'
         writer.write(response)
         await writer.drain()
-        write_logs("Successfully Queried", "cart metadata", cartid.decode())
+        write_logs("Successful query", "cart metadata", cartid.decode())
         return 
     response = b"No Metadata\n"
     writer.write(response)
     await writer.drain()
-    write_logs("Failed Fetch to metadata", "cart metadata", cartid.decode())
+    write_logs("Failed query", "cart metadata", cartid.decode())
     return 
 
 ######################################################################### DISPATCH
-async def dispatch(metadata, key, delay, path, dname=None):
+async def dispatch(metadata, key, delay, path, dname=None, dsize=None):
     await asyncio.sleep(delay)
-    metadata["carts"][key]["status"] = 0
-    if dname is not None:
+    metadata["carts"][key]["status"] = 0 # FIX THIS SO THAT IT ONLY CHANGES AFTER async function returns
+    if dname is not None and dsize is not None:
         metadata["carts"][key]["datasets"].append(dname)
-    path.write_text(json.dumps(metadata, indent=4))
+        metadata["carts"][key]["space"] -= dsize
+
+    if dname is not None and dsize is not None: # create a new "file" that tracks dataset information
+        full_path = os.path.join(DATA_PATH, dname)  # Create a new "file" that tracks dataset information
+
+        # construct JSON object
+        data = {
+            dname: [
+                {
+                    "cart-id": int(key),
+                    "type": "default"
+                }
+            ]
+        }
+        with open(full_path, 'w', encoding='utf-8') as file:
+            json.dump(data, file, indent=4, ensure_ascii=False)
+
+    path.write_text(json.dumps(metadata, indent=4)) # update the metadata to showcase return
+
     print(f"Finished coroutine for dispatching cart {str(metadata["carts"][key]["id"])}")
-    write_logs("Successful return after dispatch", "cart", str(key))
+    write_logs("Successful dispatch", "cart", str(key))
+
+    # write to metadata
 
 # POST: This module is a read-only POST request from a random data server
 # Typically used when the server wishes to train a model and needs the data form a cart
@@ -117,16 +137,16 @@ async def read_from_cart(writer, path):
             path_obj.write_text(json.dumps(cart_data, indent=4))
             print(f"Starting coroutine for dispatching cart {str(cart["id"])}")
             asyncio.create_task(dispatch(cart_data, str(cart["id"]), 5, path_obj))
-            write_logs("Successfully Dispatch", "cart", cart["id"])
+            write_logs("Successful dispatch", "cart", cart["id"])
             return 
         else:
             writer.write(b"All carts are busy...\n")
             await writer.drain()
-            write_logs("Failed Dispatch to dataset", "dataset name", path.decode())
+            write_logs("Failed dispatch", "dataset name", path.decode())
     else:
         writer.write(b"Dataset doesn't exist\n")
         await writer.drain()
-        write_logs("Failed Dispatch to dataset", "dataset name", path.decode())
+        write_logs("Failed dispatch", "dataset name", path.decode())
         return
 
 
@@ -141,11 +161,12 @@ def list_available_carts(gigs):
         if metadata == None:
             print('Metadata not found...\n')
             return 
-        for key, value in cart_data["carts"].items():
+        for key, value in metadata["carts"].items():
             if value["status"] == 0 and (value["space"]) >= gigs:
                 available.append(value["id"])
         response = "Available: "
         response += '|'.join(str(x) for x in available)
+        response += '\n'
     if response == None:
         return (0, b"No available carts at the moment")
     return (1, response.encode())
@@ -163,7 +184,7 @@ async def handler(reader, writer):
         option = (await reader.readline()).strip()
         # print(f"Got option: {option}")
 
-        if option == b'1' or option == b'2':
+        if option == b'1' or option == b'2' or option ==b'3':
             if option == b'1':
                 writer.write(b'[?] Enter a cart id:\n')
                 await writer.drain()
@@ -191,10 +212,10 @@ async def handler(reader, writer):
                 await writer.drain()
                 if listing[0] == 1: # there are available carts
                     # prompts client to choose a cart to dispatch
-                    writer.write(b'[?] Choose a cart (id):\n')
+                    writer.write(b' [?] Choose a cart (id):\n')
                     await writer.drain()
-                    cartid = (await reader.readline()).strip()
-                    await write_to_cart(writer, cartid)
+                    response = (await reader.readline()).strip()
+                    await write_to_cart(writer, response.decode(), dataset.decode(), (int)(datasize))
 
             writer.write(b'[?] Would you like to make another request? (Y/N):\n')
             await writer.drain()

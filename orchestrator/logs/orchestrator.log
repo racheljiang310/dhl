@@ -1,6 +1,5 @@
 
-2025-05-13 13:21:01.641297: Successfully Queried for cart metadata: 0
-2025-05-13 13:21:09.490381: Successfully Dispatch for cart: 0
-2025-05-13 13:21:13.051810: Successfully Queried for cart metadata: 0
-2025-05-13 13:21:14.492369: Successfully Returned after dispatch for cart: 0
-2025-05-13 13:21:21.635943: Successfully Queried for cart metadata: 0
+2025-05-20 12:36:44.760899: Successful Dispatch for cart: 2
+2025-05-20 12:36:51.109420: Successfully Queried for cart metadata: 0
+2025-05-20 12:36:54.766207: Successful return after dispatch for cart: 2
+2025-05-20 12:36:58.335431: Successfully Queried for cart metadata: 2
