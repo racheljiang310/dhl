@@ -21,7 +21,11 @@ For the upcoming week, I plan to:
 - start thinking about adding an extra layer above FTL
 
 ## 3. **Weekly Notes**
-- [ ] ...
+- [ ] Figure out how many PCI lanes can we do at a single time for each server/cart?
+- [ ] Server uses: PCIe addressing (Bus/Device/Function)
+- [ ] Namespace ID (usually 1), Starting LBA, Number of blocks, Dest & (DMA buffer)
+- [ ] Namespace ID: unique identifier used in NVMe protocol to distinguish different storage spaces on the same NVMe SSD
+- [ ] Server must know the LBA number (Logic Block Address) for **I/O Queue Submission**
 
 #### Meeting Notes
 - [ ] Find optimal "batch" size
