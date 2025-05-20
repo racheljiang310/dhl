@@ -4,7 +4,7 @@
 ---
 **Name:** [Rachel Jiang]  
 **Research Topic:** [DHL UGrad Research]  
-**Week:** [7]: May 23 🥧
+**Week:** [8]: May 23 🥧
 
 ## 1. **Overview of Progress**
 
@@ -27,7 +27,7 @@ For the upcoming week, I plan to:
 - [ ] Find optimal "batch" size
 - [ ] Assume batch size os the same
 - [ ] Figure out what needs to be in metadata so that the data server knows what it needs to read the correct "batch" in each cart & ssd
-- [ ] Implement ftl_wrapper
+- [ ] Implement ftl_wrapper => what do we need for data server to "read" from the corresponding ssd, which ePCI? etc. 
 
 ---
 # Week 7
