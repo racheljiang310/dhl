@@ -14,13 +14,35 @@ import os
 DATA_PATH = 'datasets/'
 METADATA_PATH = 'metadata.json'
 LOGS_PATH = 'logs/orchestrator.log'
-menu = b'[?] Choose (1:head|2:read|3:write|4:exit):\n'
+menu = b'[?] Choose (1:head|2:read|3:write|4:delete|5:exit):\n'
 # CACHE_PATH = 'cache.json'
 
 ######################################################################### LOGS
 def write_logs(action, d_type, data):
     with open(LOGS_PATH, 'a') as file:
         file.write(f"\n{datetime.datetime.now()}: {action} for {d_type}: {data}")
+
+######################################################################### REMOVE DATASETS
+async def remove_from_cart(writer, dname):
+    cart = None
+    path_obj = pathlib.Path(METADATA_PATH)
+    metadata = json.loads(path_obj.read_bytes().decode())
+    for key, value in metadata["carts"].items(): # find cart obj
+        if dname in key["datasets"]:
+            value["status"] = 1
+            cart = value
+            break
+
+    if cart is not None:
+        path_obj.write_text(json.dumps(metadata, indent=4))
+        print(f"Starting coroutine for dispatching cart {str(cart["id"])}")
+        asyncio.create_task(dispatch(metadata, str(cart["id"]), 5, path_obj, dname, None))
+        write_logs("Successful deletion", "cart", cart["id"])
+        return 
+    else:
+        writer.write(b"Unexpected failure...\n")
+        await writer.drain()
+        write_logs("Failed deletion", "dataset name", dname)
 
 ######################################################################### PUSH DATASETS
 async def write_to_cart(writer, cartid, dname, dsize):
@@ -52,8 +74,10 @@ def find_metadata_by_id(byte_text, cartid):
         return None
     return data[str(cartid)]
 
-# HEAD: This module fetches metadata about a specific cart based on cart-id
 async def fetch_metadata(writer, cartid):
+    '''
+    HEAD: This module fetches metadata about a specific cart based on cart-id
+    '''
     path = pathlib.Path(METADATA_PATH)
     if path.is_file():
         response = b"Metadata: "
@@ -84,11 +108,10 @@ async def fetch_metadata(writer, cartid):
 async def dispatch(metadata, key, delay, path, dname=None, dsize=None):
     await asyncio.sleep(delay)
     metadata["carts"][key]["status"] = 0 # FIX THIS SO THAT IT ONLY CHANGES AFTER async function returns
-    if dname is not None and dsize is not None:
+    
+    if dname is not None and dsize is not None: # create a new "file" that tracks dataset information
         metadata["carts"][key]["datasets"].append(dname)
         metadata["carts"][key]["space"] -= dsize
-
-    if dname is not None and dsize is not None: # create a new "file" that tracks dataset information
         full_path = os.path.join(DATA_PATH, dname)  # Create a new "file" that tracks dataset information
 
         # construct JSON object
@@ -96,13 +119,34 @@ async def dispatch(metadata, key, delay, path, dname=None, dsize=None):
             dname: [
                 {
                     "cart-id": int(key),
+                    "size": int(dsize),
                     "type": "default"
                 }
             ]
         }
         with open(full_path, 'w', encoding='utf-8') as file:
             json.dump(data, file, indent=4, ensure_ascii=False)
+    elif dname is not None and dsize is None: # deletion of dataset
 
+        # Tries to find this path and remove it from records
+        dataset_size = 0
+        full_path = os.path.join(DATA_PATH, dname) 
+        if not os.path.exists(full_path):
+            print(f"File '{file_path}' does not exist.")
+            return
+
+        # saves the data size information used to update metadata
+        with open(full_path, 'r') as data_file:
+            data = json.load(data_file)
+            dataset_size = (int)(data[dname]["size"])
+        
+        os.remove(file_path)
+        print(f"File '{file_path}' deleted successfully.")
+
+        # updates metadata
+        metadata["carts"][key]["datasets"].remove(dname)
+        metadata["carts"][key]["space"] += dataset_size # update size of cart space
+    
     path.write_text(json.dumps(metadata, indent=4)) # update the metadata to showcase return
 
     print(f"Finished coroutine for dispatching cart {str(metadata["carts"][key]["id"])}")
@@ -216,13 +260,21 @@ async def handler(reader, writer):
                     await writer.drain()
                     response = (await reader.readline()).strip()
                     await write_to_cart(writer, response.decode(), dataset.decode(), (int)(datasize))
+            elif option == b'4':
+                # fetch data set name
+                writer.write(b'[?] Dataset name:\n')
+                await writer.drain()
+                dataset = (await reader.readline()).strip()
+                
+                # find and modify metadata
+                await delete_from_cart(writer, dataset.decode())
 
             writer.write(b'[?] Would you like to make another request? (Y/N):\n')
             await writer.drain()
             answer = (await reader.readline()).strip()
             if answer == b'N':
                 break
-        elif option == b'4':
+        elif option == b'5':
             break
         else:
             writer.write(b'Invalid option. Choose again\n')

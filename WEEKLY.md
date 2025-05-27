@@ -1,5 +1,31 @@
 # Weekly Research Progress Update
 ---
+# Week 9
+---
+**Name:** [Rachel Jiang]  
+**Research Topic:** [DHL UGrad Research]  
+**Week:** [8]: May 30 🥧
+
+## 1. **Overview of Progress**
+
+This week progress: 👾
+- Orchestrator => "Cart Whisperer" 
+  - new delete option that removes datasets from metadata
+
+## 2. **Next Steps**
+For the upcoming week, I plan to:
+- continue digging through ewaste bins
+- need to update dataset json info if needed
+- need a remove option
+- start thinking about adding an extra layer above FTL
+
+## 3. **Weekly Notes**
+- [ ] ...
+
+#### Meeting Notes
+- [ ] ...
+
+---
 # Week 8
 ---
 **Name:** [Rachel Jiang]  

@@ -3,6 +3,7 @@
     [
         {
             "cart-id": 0,
+            "size": 32,
             "type": "train"
         }
     ]

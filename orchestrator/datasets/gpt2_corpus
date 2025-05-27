@@ -3,14 +3,17 @@
     [
         {
             "cart-id": 0,
+            "size": 32,
             "type": "train"
         },
         {
             "cart-id": 1,
+            "size": 32,
             "type": "validate"
         },
         {
             "cart-id": 2,
+            "size": 32,
             "type": "truth"
         }
     ]
