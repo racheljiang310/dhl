@@ -1,29 +1,54 @@
 # Weekly Research Progress Update
 ---
-# Week 9
+
+# Week 10
 ---
 **Name:** [Rachel Jiang]  
 **Research Topic:** [DHL UGrad Research]  
-**Week:** [8]: May 30 🥧
+**Week:** [10]: June 06 🥧
 
 ## 1. **Overview of Progress**
 
 This week progress: 👾
-- Orchestrator => "Cart Whisperer" 
-  - new delete option that removes datasets from metadata
+- ORCHESTRATOR => "Cart Whisperer"  => did not work on
+  - updated metadata to contain neccessary information
+- FTL-WRAPPER => an extra layer of abstraction for flash translation layer
+  - studied nvme-cli & wrote read/write functions (have not tested yet)
 
 ## 2. **Next Steps**
 For the upcoming week, I plan to:
 - continue digging through ewaste bins
-- need to update dataset json info if needed
-- need a remove option
-- start thinking about adding an extra layer above FTL
-
-## 3. **Weekly Notes**
-- [ ] ...
+- continue working on ftl-wrapper in conjunction
 
 #### Meeting Notes
-- [ ] ...
+- [ ] TBD
+
+---
+
+# Week 9
+---
+**Name:** [Rachel Jiang]  
+**Research Topic:** [DHL UGrad Research]  
+**Week:** [9]: May 30 🥧
+
+## 1. **Overview of Progress**
+
+This week progress: 👾
+- ORCHESTRATOR => "Cart Whisperer" 
+  - new delete option that removes datasets from metadata
+- FTL-WRAPPER => an extra layer of abstraction for flash translation layer
+  - enables client to use the results of orchestrator to send read/write requests to a cart server
+    that will use the `nvme-cli` tool to interface with ssds that the client is connected to (assume 64 ssds total)
+
+## 2. **Next Steps**
+For the upcoming week, I plan to:
+- continue digging through ewaste bins
+- need to update dataset json info if needed for ftl-wrapper
+- need a remove option
+- continue working on ftl-wrapper in conjunction
+
+#### Meeting Notes
+- [ ] No meeting this week, updates are in Zulip
 
 ---
 # Week 8

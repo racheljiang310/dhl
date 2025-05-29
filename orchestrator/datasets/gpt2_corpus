@@ -3,18 +3,31 @@
     [
         {
             "cart-id": 0,
+            
             "size": 32,
-            "type": "train"
+            "type": "train",
+            "nsid": 1,
+            "slba": 32,
+            "nblocks": 5,
+            "devname": "/dev/nvme0n1"
         },
         {
             "cart-id": 1,
             "size": 32,
-            "type": "validate"
+            "type": "validate",
+            "nsid": 1,
+            "slba": 32,
+            "nblocks": 5,
+            "devname": "/dev/nvme0n1"
         },
         {
             "cart-id": 2,
             "size": 32,
-            "type": "truth"
+            "type": "truth",
+            "nsid": 1,
+            "slba": 32,
+            "nblocks": 5,
+            "devname": "/dev/nvme0n1"
         }
     ]
 }
