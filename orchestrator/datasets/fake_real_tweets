@@ -4,7 +4,11 @@
         {
             "cart-id": 0,
             "size": 32,
-            "type": "train"
+            "type": "train",
+            "nsid": 1,
+            "slba": 32,
+            "nblocks": 5,
+            "devname": "/dev/nvme2n1"
         }
     ]
 }

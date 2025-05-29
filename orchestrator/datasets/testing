@@ -4,7 +4,11 @@
         {
             "cart-id": 2,
             "size": 32,
-            "type": "default"
+            "type": "default",
+            "nsid": 1,
+            "slba": 32,
+            "nblocks": 5,
+            "devname": "/dev/nvme1n1"
         }
     ]
 }
